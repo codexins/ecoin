@@ -1,0 +1,17 @@
+$cx-text-color: 						#454545;
+$cx-body-bg-color: 						#fff;
+
+$cx-primary-color:  					#919190;
+$cx-secondary-color: 					#25BEA0;
+$cx-tertiary-color:						#43423E;
+$cx-fourth-color: 						#f9b808;
+
+$cx-offset-color:						lighten($cx-tertiary-color, 70%);
+
+
+$cx-border-color:						#aaa; // light gray
+
+$cx-link-color: 						$cx-primary-color;
+$cx-link-hover-color: 					$cx-secondary-color;
+
+@import "../styles";
