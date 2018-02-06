@@ -44,7 +44,7 @@ INDEX:
         $fillscreen 		= $(".fill-screen"),
         $fullscreenVideo 	= $("#header_full_screen_video"),
         $bgSlide 			= $("#header_bg_slide"),
-        $sfMenu 			= $(".sf-menu"),
+        $sfMenu 			= $(".main-menu"),
         $pageloader 		= $(".cx-pageloader"),
         $intelHeader 		= $(".intelligent-header"),
         $counter 			= $(".counter"),
@@ -176,22 +176,9 @@ INDEX:
     *************************************************************/
 
     CODEXIN.mainNav = function() {
-	    $sfMenu.superfish({
-	        delay: 0, // one second delay on mouseout
-	        animation: {
-	            opacity: 'show',
-	            height: 'show'
-	        },
-	        animationOut: {
-	            opacity: 'hide'
-	        },
-	        speed: 'fast', // faster animation speed
-	        autoArrows: false,
-	        disableHI: true
-	    });
 
 	    // Submenu Intelligent hover functionality
-	    $sfMenu.on('mouseover', ".sub-menu", function() {
+	    $sfMenu.on('mouseover', "ul", function() {
 	        var menu = $(this);
 	        var child_menu = $(this).find('ul');
 	        if ($(menu).offset().left + $(menu).width() + $(child_menu).width() > $window.width()) {

@@ -94,7 +94,7 @@
 
 ///* making a circle */
 
-@mixin cx-circle($width, $bg, $color) {
+@mixin cx-circle($width) {
     width: $width;
     height: $width;
     display: inline-block;
@@ -103,10 +103,8 @@
     -ms-border-radius: $width/2;
     -o-border-radius: $width/2;
     border-radius: $width/2;
-    background: $bg;
     text-align: center;
     line-height: $width;
-    color: $color;
 }
 
 

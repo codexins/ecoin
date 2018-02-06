@@ -1,0 +1,14 @@
+/**
+ * components social icons
+ *
+ */
+
+ .social-icons {
+
+ 	&.type01 {
+ 		a{
+ 		 	@include box(24px, 24px);
+ 		}
+
+ 	}
+ }

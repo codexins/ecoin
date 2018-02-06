@@ -71,27 +71,15 @@ img {
 }
 
 a {
-    @extend %cx-transition ;
     text-decoration:none;
-    color:$cx-link-color;
-}
-
-a:hover ,a:focus {
-  text-decoration: none;
-}
-
-a:active, a:hover {
-  outline: 0 none;
-  text-decoration: none;
-}
-
-a:hover {
-    color: $cx-link-hover-color;
-}
-
-a:focus {
-    outline:0px solid;
-    color: initial  ;
+    @extend %color-primary;
+    @extend %cx-transition ;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: 0 none;
+        @extend %color-secondary;
+    }
 }
 
 
