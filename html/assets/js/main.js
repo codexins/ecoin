@@ -82,12 +82,23 @@ INDEX:
 		    $sliderPro.sliderPro({
 		    	width: '100%',
 		    	visibleSize: '100%',
-				forceSize: 'fullWidth',
 		    	height:500,
 		    	arrows: true,
 				buttons: false,
-				autoplay:false
-
+				autoplay:false,
+				forceSize: 'fullWidth',
+				responsive: true,
+				breakpoints: {
+					1199: {
+						height: 470,
+					},
+					991: {
+						height: 430
+					},
+					767: {
+						height: 350
+					}
+				}
 		    });
 		}
 	};
@@ -299,6 +310,23 @@ INDEX:
 	    });
 	};
 
+	// Mobile menu sub-menu actions
+	CODEXIN.responsiveSubMenu = function() {
+		var nav = $(".mobile-menu");
+		// adds toggle button to li items that have children
+		nav.find('li a').each(function() {
+			if ($(this).next().length > 0) {
+				$(this).parent('li').addClass('has-child').append('<a class="drawer-toggle" href="#"><i class="fa fa-angle-down"></i></a>');
+			}
+		});
+
+		// expands the dropdown menu on each click 
+		nav.find('li .drawer-toggle').on('click', function(e) {
+			e.preventDefault();
+			$(this).parent('li').children('ul').stop(true, true).slideToggle(250);
+			$(this).parent('li').toggleClass('open');
+		});
+	}
 
     /************************************************************
         s13 - Reasons to Choose Carousel
@@ -547,6 +575,7 @@ INDEX:
     	CODEXIN.headerAutoHide(),
     	CODEXIN.animatedCounter(),
     	CODEXIN.responsiveMenu(),
+    	CODEXIN.responsiveSubMenu(),
     	CODEXIN.reasonsCarousel(),
     	CODEXIN.testimonialCarousel(),
     	CODEXIN.clientCarousel(),

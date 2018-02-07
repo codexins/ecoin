@@ -3,6 +3,21 @@
  *
  */
 
+ // .slider-section {
+ //    height: 500px;
+ //    @include respond-to(notebook) {
+ //        height: 470px;
+ //    }
+
+ //    @include respond-to(tablet) {
+ //        height: 430px;
+ //    }
+
+ //    @include respond-to(mobile) {
+ //        height:350px;
+ //    }
+ // }
+
 .overlay-mask{
 	@include abs-position(0,0,0,0);
 	background-color: rgba(0,0,0,.55);
@@ -10,19 +25,31 @@
 
 .sp-layer {
  	color: #fff;
- 	z-index:1;
+    position: relative;
+    // width:70%;
+    // @include respond-to(tablet) {
+    //     width:90%;
+    // }
+
+    // @include respond-to(mobile) {
+    //     width:100%;
+
+    // }
 }
+
 
 .slider-pro {
 	h2 {
 		&.sp-layer {
 			font-size: 2.2em;
+            margin-bottom: 10px;
 		}
 	}
 
 	p {
 		&.sp-layer {
 			font-size: 1.1em;
+            margin-bottom: 30px;
 		}
 	}
 }
@@ -47,7 +74,44 @@
     }
 
     @include respond-to(mobile) {
+        width:95%;
     	width: calc(100% - 15px);
     }
  }
 
+
+.inner-wrapper {
+    @include cx-centered(vertical);
+    z-index: 1;
+    &.left-aligned {
+        text-align: left;
+        left:0;
+        @include respond-to(mobile) {
+            text-align: center;
+        }
+    }
+
+    &.center-aligned {
+        @include cx-centered(both);
+        text-align: center;
+    }
+
+
+    &.right-aligned {
+        text-align: right;
+        right:0;
+        @include respond-to(mobile) {
+            text-align: center;
+        }
+    }
+
+    width:70%;
+    @include respond-to(tablet) {
+        width:90%;
+    }
+
+    @include respond-to(mobile) {
+        width:100%;
+
+    }
+}
