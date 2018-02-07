@@ -24,6 +24,10 @@
 	    list-style-type: none;
 	    @extend %cx-transition;
 
+	    @include respond-to(notebook) {
+	    	margin-left: 25px;
+	    }
+
 	    a {
 	    	position: relative;
 		    display: inline-block;
@@ -97,5 +101,9 @@
 				visibility: visible;
 	    	}
 	    }
+	}
+
+	@include media-only(notebook, max) {
+		display: none;
 	}
 }

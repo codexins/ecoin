@@ -39,7 +39,8 @@ INDEX:
 
     var $window 			= $(window),
         $document 			= $(document),
-        $owlSlider			= $(".primary-slider"),
+        $sliderPro			= $("#primary_slider"),
+        $sliderProOverlay	= $(".sp-slide"),
         $owlSliderSlide		= $(".slider-section .slide-single"),
         $fillscreen 		= $(".fill-screen"),
         $fullscreenVideo 	= $("#header_full_screen_video"),
@@ -77,21 +78,23 @@ INDEX:
     *************************************************************/
 
 	CODEXIN.primarySlider = function() {
-		if ($owlSlider.cxExists()) {
-		    $owlSlider.owlCarousel({
-		        smartSpeed:1000,
-		        margin:0,
-		        animateOut: 'fadeOut',
-		        animateIn: 'fadeIn',
-		        items: 1,
-		        nav:true,
-		        autoplay:true,
-		        autoplayTimeout:5000,
-		        loop:true,
-		        mouseDrag: false,
-		        dots: true,
-		        navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']
+		if ($sliderPro.cxExists()) {
+		    $sliderPro.sliderPro({
+		    	width: '100%',
+		    	visibleSize: '100%',
+				forceSize: 'fullWidth',
+		    	height:500,
+		    	arrows: true,
+				buttons: false,
+				autoplay:false
+
 		    });
+		}
+	};
+
+	CODEXIN.primarySliderOverlay = function() {
+		if ($sliderProOverlay.cxExists()) {
+			$sliderProOverlay.append('<div class="overlay-mask"></div>');
 		}
 	};
 
@@ -537,6 +540,7 @@ INDEX:
     // Document ready functions
     $document.on('ready', function() {
     	CODEXIN.primarySlider(),
+    	CODEXIN.primarySliderOverlay(),
     	CODEXIN.fullscreenVideoHeader(),
     	CODEXIN.backgroundSliderHeader(),
     	CODEXIN.mainNav(),

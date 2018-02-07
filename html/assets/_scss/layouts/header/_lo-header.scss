@@ -10,9 +10,15 @@
 		display: block;
 		width:100%;
 	}
+
+	@include media-only(notebook, max) {
+		margin-top: 0;
+	}
 }
 
 .header-inline {
-	// padding: 10px 0;
+	@include media-only(notebook, max) {
+		padding: 10px 0;
+	}
 }
 

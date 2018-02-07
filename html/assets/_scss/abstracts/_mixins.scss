@@ -210,8 +210,8 @@
     color: $cx-text-color;
     @extend %cx-transition;
     &:hover {
-        border-color: $cx-link-hover-color;
-        background: $cx-link-hover-color;
+        border-color: $cx-secondary-color;
+        background: $cx-secondary-color;
         color:lighten($cx-text-color, 100%);
     }
  }

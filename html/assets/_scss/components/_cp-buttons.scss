@@ -1,0 +1,18 @@
+/**
+ * Components buttons
+ *
+ */
+
+ .default-btn {
+ 	@include button;
+ 	.sp-layer & {
+ 		color: #fff;
+ 		background-color: $cx-primary-color;
+ 		border-color: $cx-primary-color;
+ 		@include cx-transition($cx-transition !important);
+ 		&:hover {
+ 			background-color: $cx-secondary-color;
+ 			border-color: $cx-secondary-color;
+ 		}
+ 	}
+ }

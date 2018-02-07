@@ -1,0 +1,53 @@
+/**
+ * components primary-slider
+ *
+ */
+
+.overlay-mask{
+	@include abs-position(0,0,0,0);
+	background-color: rgba(0,0,0,.55);
+}
+
+.sp-layer {
+ 	color: #fff;
+ 	z-index:1;
+}
+
+.slider-pro {
+	h2 {
+		&.sp-layer {
+			font-size: 2.2em;
+		}
+	}
+
+	p {
+		&.sp-layer {
+			font-size: 1.1em;
+		}
+	}
+}
+
+ .layer-wrapper {
+	width: 1140px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    @include respond-to(notebook) {
+    	width: 940px;
+    }
+
+    @include respond-to(tablet) {
+    	width: 720px;
+    }
+
+    @include respond-to(mobile) {
+    	width: calc(100% - 15px);
+    }
+ }
+

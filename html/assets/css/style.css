@@ -323,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 25px;
 }
 
-a, .main-menu li, .main-menu li ul {
+a, .default-btn, .main-menu li, .main-menu li ul {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -567,6 +567,101 @@ to a reusable component.
   display: inline-block;
 }
 
+/**
+ * components primary-slider
+ *
+ */
+.overlay-mask {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.sp-layer {
+  color: #fff;
+  z-index: 1;
+}
+
+.slider-pro h2.sp-layer {
+  font-size: 2.2em;
+}
+
+.slider-pro p.sp-layer {
+  font-size: 1.1em;
+}
+
+.layer-wrapper {
+  width: 1140px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .layer-wrapper {
+    width: 940px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .layer-wrapper {
+    width: 720px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .layer-wrapper {
+    width: calc(100% - 15px);
+  }
+}
+
+/**
+ * Components buttons
+ *
+ */
+.default-btn {
+  padding: 8px 20px;
+  display: inline-block;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  color: #404040;
+}
+
+.default-btn:hover {
+  border-color: #4E733D;
+  background: #4E733D;
+  color: white;
+}
+
+.sp-layer .default-btn {
+  color: #fff;
+  background-color: #e95223;
+  border-color: #e95223;
+  -webkit-transition: all 0.3s ease !important;
+  -moz-transition: all 0.3s ease !important;
+  -ms-transition: all 0.3s ease !important;
+  -o-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
+}
+
+.sp-layer .default-btn:hover {
+  background-color: #4E733D;
+  border-color: #4E733D;
+}
+
 /************************************************************
 	c20 - Layout - header
 *************************************************************/
@@ -582,6 +677,18 @@ to a reusable component.
 .logo a {
   display: block;
   width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+  .logo {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header-inline {
+    padding: 10px 0;
+  }
 }
 
 /**
@@ -633,6 +740,12 @@ to a reusable component.
   margin-left: 30px;
   position: relative;
   list-style-type: none;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-menu li {
+    margin-left: 25px;
+  }
 }
 
 .main-menu li a {
@@ -708,6 +821,12 @@ to a reusable component.
   opacity: 1;
   transform: scale(1);
   visibility: visible;
+}
+
+@media only screen and (max-width: 991px) {
+  .main-menu {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
