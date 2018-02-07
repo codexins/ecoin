@@ -9,7 +9,7 @@
  		color: #fff;
  		background-color: $cx-primary-color;
  		border-color: $cx-primary-color;
- 		@include cx-transition($cx-transition !important);
+ 		@include cx-transition($cx-transition);
  		&:hover {
  			background-color: $cx-secondary-color;
  			border-color: $cx-secondary-color;

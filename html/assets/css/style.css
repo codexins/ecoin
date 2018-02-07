@@ -708,11 +708,11 @@ to a reusable component.
   color: #fff;
   background-color: #e95223;
   border-color: #e95223;
-  -webkit-transition: all 0.3s ease !important;
-  -moz-transition: all 0.3s ease !important;
-  -ms-transition: all 0.3s ease !important;
-  -o-transition: all 0.3s ease !important;
-  transition: all 0.3s ease !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .sp-layer .default-btn:hover {
