@@ -1,0 +1,27 @@
+/**
+ * components info-item
+ *
+ */
+
+ .info-item {
+ 	&.centered {
+ 		text-align: center;
+ 	}
+
+ 	.thumb-icon {
+ 		margin-bottom: $cx-heading-margin-bottom;
+ 		span {
+ 			@include box(50px, 50px);
+ 			font-size: 50px;
+ 		}
+ 	}
+
+ 	h3 {
+ 		font-size: 1em;
+ 		text-transform: capitalize;
+ 		margin-bottom: 5px;
+ 	}
+
+ 	margin-bottom: $cx-col-spacing;
+
+ }

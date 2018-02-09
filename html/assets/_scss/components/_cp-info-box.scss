@@ -1,0 +1,23 @@
+/**
+ * information box
+ *
+ */
+
+ .info-box {
+ 	padding: 30px;
+ 	background-color: #fff;
+ 	margin-left:15px;
+ 	img {
+ 		max-width:80px;
+ 		margin-bottom: $cx-heading-margin-bottom;
+ 	}
+ 	h3 {
+ 		font-size: 1em;
+ 		text-transform: capitalize;
+ 		margin-bottom: 5px;
+ 	}
+ }
+
+ .info-carousel {
+ 	margin-left:-15px;
+ }

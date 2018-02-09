@@ -241,3 +241,11 @@ section {
 	@extend %color-white;
 }
 
+// other classes
+
+.last {
+	margin-bottom: 0;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-col-spacing-mob;
+	}
+}

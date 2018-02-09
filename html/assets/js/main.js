@@ -51,7 +51,7 @@ INDEX:
         $counter 			= $(".counter"),
         $isoContainer 		= $(".portfolio-wrapper"),
         $isoFilter	 		= $(".portfolio-filter li"),
-        $slickOne 			= $(".reasons-to-choose"),
+        $slickOne 			= $(".info-carousel"),
         $slickTwo 			= $(".testimonial-carousel"),
         $slickNav 			= $(".testimonial-nav"),
         $slickThree 		= $(".testimonial-carousel-type-02"),
@@ -336,10 +336,12 @@ INDEX:
 	    if ($slickOne.cxExists()) {
 	        $slickOne.slick({
 	            infinite: true,
-	            slidesToShow: 3,
+	            slidesToShow: 4,
 	            slidesToScroll: 1,
 	            dots: true,
-	            arrows: false,
+	            arrows: true,
+	            prevArrow: '<span class="prev-arrow"><i class="fa fa-angle-left"></i></span>',
+	            nextArrow: '<span class="next-arrow"><i class="fa fa-angle-right"></i></span>',
 	            responsive: [{
 	                    breakpoint: 992,
 	                    settings: {

@@ -277,6 +277,7 @@ initPhotoSwipeFromDOM('.portfolio-popup');
 
 
 
+
 /* v07:
  * jQuery Waypoints - v2.0.3
  * Copyright (c) 2011-2013 Caleb Troughton

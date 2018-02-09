@@ -108,6 +108,16 @@ section {
   text-align: center;
 }
 
+.last {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .last {
+    margin-bottom: 33.75px;
+  }
+}
+
 /************************************************************
 	c01 - Base - Typography
 *************************************************************/
@@ -548,6 +558,30 @@ a, .default-btn, .main-menu li, .main-menu li ul {
   }
 }
 
+.eqheight {
+  display: table;
+  width: 100%;
+}
+
+.eqheight > div {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 767px) {
+  .eqheight > div {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .eqheight {
+    display: block;
+    width: auto;
+  }
+}
+
 /*
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating
@@ -885,6 +919,116 @@ to a reusable component.
 
 .mobile-menu-button .icon-bar + .icon-bar {
   margin-top: 4px;
+}
+
+/**
+ * components primary-title
+ *
+ */
+.primary-title {
+  font-size: 1.75em;
+}
+
+.primary-title.centered {
+  text-align: center;
+}
+
+.primary-title.right-aligned {
+  text-align: right;
+}
+
+/**
+ * information box
+ *
+ */
+.info-box {
+  padding: 30px;
+  background-color: #fff;
+  margin-left: 15px;
+}
+
+.info-box img {
+  max-width: 80px;
+  margin-bottom: 25px;
+}
+
+.info-box h3 {
+  font-size: 1em;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.info-carousel {
+  margin-left: -15px;
+}
+
+/**
+ * components info-item
+ *
+ */
+.info-item {
+  margin-bottom: 45px;
+}
+
+.info-item.centered {
+  text-align: center;
+}
+
+.info-item .thumb-icon {
+  margin-bottom: 25px;
+}
+
+.info-item .thumb-icon span {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.info-item h3 {
+  font-size: 1em;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+/**
+ * components slick
+ *
+ */
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  top: -55px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  display: inline-block;
+  background: #fff;
+  cursor: pointer;
+  opacity: .75;
+}
+
+.prev-arrow i,
+.next-arrow i {
+  font-size: 18px;
+}
+
+.prev-arrow:focus, .prev-arrow:hover,
+.next-arrow:focus,
+.next-arrow:hover {
+  opacity: 1;
+}
+
+.slick-dots {
+  bottom: -50px;
+}
+
+.prev-arrow {
+  right: 40px;
 }
 
 /************************************************************

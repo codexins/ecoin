@@ -1,0 +1,15 @@
+/**
+ * components primary-title
+ *
+ */
+
+ .primary-title {
+ 	font-size: 1.75em;
+ 	&.centered {
+ 		text-align: center;
+ 	}
+
+ 	&.right-aligned {
+ 		text-align: right;
+ 	}
+ }

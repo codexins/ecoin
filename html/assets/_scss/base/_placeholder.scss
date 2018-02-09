@@ -261,3 +261,7 @@
 		padding-top: $cx-col-spacing-mob;
 	}
 }
+
+.eqheight {
+	@include eqheight;
+}

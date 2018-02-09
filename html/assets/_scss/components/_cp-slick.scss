@@ -1,0 +1,30 @@
+/**
+ * components slick
+ *
+ */
+
+.prev-arrow,
+.next-arrow {
+	position:absolute;
+	top:-($cx-heading-margin-bottom + 30px);
+	right:0;
+	@include box(30px, 30px);
+	background: #fff;
+	cursor: pointer;
+	i {
+		font-size: 18px;
+	}
+	opacity: .75;
+	&:focus,
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.slick-dots {
+	bottom: -(2*$cx-heading-margin-bottom);
+}
+
+.prev-arrow {
+	right: 40px;
+}
