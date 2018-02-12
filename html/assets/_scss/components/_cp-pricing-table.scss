@@ -1,0 +1,132 @@
+/**
+ * components pricing table
+ *
+ */
+
+ .pricing-table-wrapper {
+ 	margin-bottom: $cx-col-spacing;
+ 	@include respond-to(mobile) {
+ 		margin-bottom: $cx-col-spacing-mob;
+ 	}
+ 	text-align: center;
+
+ 	.price-type {
+ 		font-size: 1.2em;
+ 		margin-bottom: 0;
+ 		padding: 15px;
+ 		background: $cx-primary-color;
+ 		color: #fff;
+ 	}
+
+ 	.price-cost {
+ 		padding: 30px 15px;
+ 		margin-bottom:0;
+ 		color: #fff;
+ 		p {
+ 			margin-bottom: 0;
+ 			font-size: 1.4em;
+ 			span {
+ 				font-size: .5em;
+ 			}
+ 		}
+ 	}
+
+ 	.price-top {
+ 		background: lighten($cx-primary-color, 10%);
+ 	}
+
+ 	.price-bottom {
+ 		padding-top: $cx-heading-margin-bottom;
+ 		overflow: hidden;
+ 		border-left: 1px solid $cx-primary-color;
+ 		border-right: 1px solid $cx-primary-color;
+ 		//border-left: 1px solid $cx-primary-color;
+ 		background: #fff;
+ 		ul {
+ 			margin: 0;
+ 			padding: 0;
+ 			margin-bottom: $cx-heading-margin-bottom;
+ 			li {
+ 				list-style-type: none;
+ 				margin-bottom: 5px;
+ 				&:last-child {
+ 					margin-bottom: 0;
+ 				}
+ 			}
+ 		}
+
+ 	}
+
+ 	.default-btn {
+		display: block;
+		border:0;
+		background: $cx-primary-color;
+		color: #fff;
+		&:focus,
+		&:hover {
+			// background: darken($cx-primary-color, 10%);
+		}
+ 	}
+
+ 	&.type02 {
+ 		//border:1px solid lighten($cx-secondary-color, 20%);
+ 		.price-type {
+ 			background: $cx-secondary-color;
+ 		}
+
+	 	.price-top {
+	 		background: lighten($cx-secondary-color, 10%);
+	 	}
+
+	 	.price-bottom {
+	 		border-left: 1px solid lighten($cx-secondary-color, 20%);
+	 		border-right: 1px solid lighten($cx-secondary-color, 20%);
+	 	}
+
+	 	.default-btn {
+	 		background: $cx-secondary-color;
+	 	}
+ 	}
+
+ 	&.type03 {
+ 		//border:1px solid lighten($cx-fourth-color, 20%);
+ 		.price-type {
+ 			background: $cx-fourth-color;
+ 		}
+
+	 	.price-top {
+	 		background: lighten($cx-fourth-color, 10%);
+	 	}
+
+	 	.price-bottom {
+	 		border-left: 1px solid lighten($cx-fourth-color, 20%);
+	 		border-right: 1px solid lighten($cx-fourth-color, 20%);
+	 	}
+
+	 	.default-btn {
+	 		background: $cx-fourth-color;
+	 	}
+ 	}
+
+
+ 	&.type04 {
+ 		//border:1px solid lighten($cx-fifth-color, 20%);
+ 		.price-type {
+ 			background: $cx-fifth-color;
+ 		}
+
+	 	.price-top {
+	 		background: lighten($cx-fifth-color, 10%);
+	 	}
+
+	 	.price-bottom {
+	 		border-left: 1px solid lighten($cx-fifth-color, 20%);
+	 		border-right: 1px solid lighten($cx-fifth-color, 20%);
+	 	}
+
+	 	.default-btn {
+	 		background: $cx-fifth-color;
+	 	}
+ 	}
+
+ }

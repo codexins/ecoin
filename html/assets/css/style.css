@@ -234,9 +234,9 @@ textarea {
 input[type="reset"],
 input[type="button"],
 input[type="submit"] {
-  border: 1px solid #e95223;
+  border: 1px solid #2D93BA;
   min-height: 40px;
-  background: #e95223;
+  background: #2D93BA;
   color: white;
 }
 
@@ -260,15 +260,15 @@ input[placeholder] {
 button:focus,
 input:focus,
 textarea:focus {
-  border-color: #e95223;
+  border-color: #2D93BA;
   outline: 0;
 }
 
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  border-color: #4E733D;
-  background-color: #4E733D;
+  border-color: #3EA69B;
+  background-color: #3EA69B;
 }
 
 ::-moz-selection {
@@ -291,13 +291,13 @@ input[type="button"]:hover {
 /************************************************************
 	c02 - Base - Placeholders
 *************************************************************/
-.vpadding, .process {
+.vpadding {
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
 @media only screen and (max-width: 767px) {
-  .vpadding, .process {
+  .vpadding {
     padding-top: 67.5px;
     padding-bottom: 67.5px;
   }
@@ -332,21 +332,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
   margin-top: 0;
   margin-bottom: 25px;
-}
-
-.process {
-  position: relative;
-}
-
-.process:before {
-  background: rgba(0, 0, 0, 0.55);
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 a, .default-btn, .main-menu li, .main-menu li ul {
@@ -414,11 +399,11 @@ a, .default-btn, .main-menu li, .main-menu li ul {
 }
 
 .bgc-primary {
-  background-color: #e95223;
+  background-color: #2D93BA;
 }
 
 .bgc-secondary {
-  background-color: #4E733D;
+  background-color: #3EA69B;
 }
 
 .bgc-tertiary, .header-top {
@@ -426,7 +411,7 @@ a, .default-btn, .main-menu li, .main-menu li ul {
 }
 
 .bgc-fourth {
-  background-color: #f9b808;
+  background-color: #E56353;
 }
 
 .bgc-transparent {
@@ -442,11 +427,11 @@ a, .default-btn, .main-menu li, .main-menu li ul {
 }
 
 .color-primary, a, .header-top a:focus, .header-top a:hover {
-  color: #e95223;
+  color: #2D93BA;
 }
 
 .color-secondary, a:hover, a:focus {
-  color: #4E733D;
+  color: #3EA69B;
 }
 
 .color-tertiary {
@@ -454,7 +439,7 @@ a, .default-btn, .main-menu li, .main-menu li ul {
 }
 
 .color-fourth {
-  color: #f9b808;
+  color: #E56353;
 }
 
 .color-transparent {
@@ -748,15 +733,15 @@ to a reusable component.
 }
 
 .default-btn:hover {
-  border-color: #4E733D;
-  background: #4E733D;
+  border-color: #3EA69B;
+  background: #3EA69B;
   color: white;
 }
 
 .sp-layer .default-btn {
   color: #fff;
-  background-color: #e95223;
-  border-color: #e95223;
+  background-color: #2D93BA;
+  border-color: #2D93BA;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -765,8 +750,8 @@ to a reusable component.
 }
 
 .sp-layer .default-btn:hover {
-  background-color: #4E733D;
-  border-color: #4E733D;
+  background-color: #3EA69B;
+  border-color: #3EA69B;
 }
 
 /**
@@ -778,25 +763,25 @@ to a reusable component.
 }
 
 .c-button {
-  color: #e95223;
-  background: #4E733D;
+  color: #2D93BA;
+  background: #3EA69B;
 }
 
 .o-header-nav {
-  background-color: #e95223;
+  background-color: #2D93BA;
 }
 
 .o-header-nav__link:hover {
-  background-color: #972f0f;
+  background-color: #195268;
 }
 
 .o-sub-nav__link {
-  border: solid 2px #e95223;
+  border: solid 2px #2D93BA;
 }
 
 .o-sub-nav__link:hover,
 .o-sub-nav__item.active .o-sub-nav__link {
-  background-color: #e95223;
+  background-color: #2D93BA;
 }
 
 .c-menu--slide-left .c-menu__item,
@@ -813,7 +798,7 @@ to a reusable component.
 .c-menu--push-left .c-menu__link:focus,
 .c-menu--push-right .c-menu__link:hover,
 .c-menu--push-right .c-menu__link:focus {
-  color: #4E733D;
+  color: #3EA69B;
 }
 
 #c-button--slide-left {
@@ -866,7 +851,7 @@ to a reusable component.
 }
 
 .c-menu__close {
-  background-color: #e95223;
+  background-color: #2D93BA;
 }
 
 .mobile-menu .has-child {
@@ -1010,12 +995,6 @@ to a reusable component.
 
 .info-item .thumb-icon img {
   max-width: 80px;
-}
-
-.info-item h3 {
-  font-size: 1em;
-  text-transform: capitalize;
-  margin-bottom: 5px;
 }
 
 .info-item .info-content p:last-child {
@@ -1188,6 +1167,139 @@ to a reusable component.
  * components parallax
  *
  */
+/**
+ * components titles
+ *
+ */
+.secondary-title {
+  font-size: 1em;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+/**
+ * components pricing table
+ *
+ */
+.pricing-table-wrapper {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .pricing-table-wrapper {
+    margin-bottom: 33.75px;
+  }
+}
+
+.pricing-table-wrapper .price-type {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  padding: 15px;
+  background: #2D93BA;
+  color: #fff;
+}
+
+.pricing-table-wrapper .price-cost {
+  padding: 30px 15px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.pricing-table-wrapper .price-cost p {
+  margin-bottom: 0;
+  font-size: 1.4em;
+}
+
+.pricing-table-wrapper .price-cost p span {
+  font-size: .5em;
+}
+
+.pricing-table-wrapper .price-top {
+  background: #47acd3;
+}
+
+.pricing-table-wrapper .price-bottom {
+  padding-top: 25px;
+  overflow: hidden;
+  border-left: 1px solid #2D93BA;
+  border-right: 1px solid #2D93BA;
+  background: #fff;
+}
+
+.pricing-table-wrapper .price-bottom ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.pricing-table-wrapper .price-bottom ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.pricing-table-wrapper .price-bottom ul li:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-table-wrapper .default-btn {
+  display: block;
+  border: 0;
+  background: #2D93BA;
+  color: #fff;
+}
+
+.pricing-table-wrapper.type02 .price-type {
+  background: #3EA69B;
+}
+
+.pricing-table-wrapper.type02 .price-top {
+  background: #57c0b5;
+}
+
+.pricing-table-wrapper.type02 .price-bottom {
+  border-left: 1px solid #7ccec5;
+  border-right: 1px solid #7ccec5;
+}
+
+.pricing-table-wrapper.type02 .default-btn {
+  background: #3EA69B;
+}
+
+.pricing-table-wrapper.type03 .price-type {
+  background: #E56353;
+}
+
+.pricing-table-wrapper.type03 .price-top {
+  background: #ec8b7f;
+}
+
+.pricing-table-wrapper.type03 .price-bottom {
+  border-left: 1px solid #f2b3ac;
+  border-right: 1px solid #f2b3ac;
+}
+
+.pricing-table-wrapper.type03 .default-btn {
+  background: #E56353;
+}
+
+.pricing-table-wrapper.type04 .price-type {
+  background: #3A556A;
+}
+
+.pricing-table-wrapper.type04 .price-top {
+  background: #4c6f8b;
+}
+
+.pricing-table-wrapper.type04 .price-bottom {
+  border-left: 1px solid #6189a9;
+  border-right: 1px solid #6189a9;
+}
+
+.pricing-table-wrapper.type04 .default-btn {
+  background: #3A556A;
+}
+
 /************************************************************
 	c20 - Layout - header
 *************************************************************/
@@ -1196,7 +1308,7 @@ to a reusable component.
  *
  */
 .logo {
-  max-width: 120px;
+  max-width: 167px;
   margin-top: 11px;
 }
 
@@ -1258,7 +1370,7 @@ to a reusable component.
 }
 
 .main-menu > li > a:focus, .main-menu > li > a:hover {
-  color: #e95223;
+  color: #2D93BA;
 }
 
 .main-menu li {
@@ -1321,7 +1433,7 @@ to a reusable component.
 }
 
 .main-menu li ul li a:focus, .main-menu li ul li a:hover {
-  background: #e95223;
+  background: #2D93BA;
 }
 
 .main-menu li ul li ul {
@@ -1364,10 +1476,29 @@ to a reusable component.
  */
 .process {
   color: #fff;
-  background-image: url("../img/background/process.jpg");
+  background-image: url("../img/slider/home-1/slide-3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.process {
+  position: relative;
+}
+
+.process:before {
+  background: rgba(0, 0, 0, 0.65);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.process .processing-columns li::after {
+  border-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
