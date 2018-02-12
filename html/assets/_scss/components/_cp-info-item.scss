@@ -4,6 +4,10 @@
  */
 
  .info-item {
+ 	margin-bottom: $cx-col-spacing;
+ 	@include respond-to(mobile) {
+ 		margin-bottom: $cx-col-spacing-mob;
+ 	}
  	&.centered {
  		text-align: center;
  	}
@@ -14,6 +18,9 @@
  			@include box(50px, 50px);
  			font-size: 50px;
  		}
+	 	img {
+	 		max-width:80px;
+	 	}
  	}
 
  	h3 {
@@ -22,6 +29,12 @@
  		margin-bottom: 5px;
  	}
 
- 	margin-bottom: $cx-col-spacing;
+ 	.info-content {
+ 		p {
+ 			&:last-child {
+ 				margin-bottom: 0;
+ 			}
+ 		}
+ 	}
 
- }
+ } // end of info-item

@@ -1,0 +1,11 @@
+/**
+ * layout home01 / processing columns
+ *
+ */
+
+ .process {
+ 	color: #fff;
+ 	@extend %vpadding;
+ 	@extend %overlay;
+ 	@include cx-background('../img/background/process.jpg');
+ }

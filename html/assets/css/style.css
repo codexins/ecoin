@@ -291,13 +291,13 @@ input[type="button"]:hover {
 /************************************************************
 	c02 - Base - Placeholders
 *************************************************************/
-.vpadding {
+.vpadding, .process {
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
 @media only screen and (max-width: 767px) {
-  .vpadding {
+  .vpadding, .process {
     padding-top: 67.5px;
     padding-bottom: 67.5px;
   }
@@ -332,6 +332,21 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+.process {
+  position: relative;
+}
+
+.process:before {
+  background: rgba(0, 0, 0, 0.55);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 a, .default-btn, .main-menu li, .main-menu li ul {
@@ -970,6 +985,12 @@ to a reusable component.
   margin-bottom: 45px;
 }
 
+@media only screen and (max-width: 767px) {
+  .info-item {
+    margin-bottom: 33.75px;
+  }
+}
+
 .info-item.centered {
   text-align: center;
 }
@@ -987,10 +1008,18 @@ to a reusable component.
   font-size: 50px;
 }
 
+.info-item .thumb-icon img {
+  max-width: 80px;
+}
+
 .info-item h3 {
   font-size: 1em;
   text-transform: capitalize;
   margin-bottom: 5px;
+}
+
+.info-item .info-content p:last-child {
+  margin-bottom: 0;
 }
 
 /**
@@ -1031,6 +1060,134 @@ to a reusable component.
   right: 40px;
 }
 
+/**
+ * Components Processing Columns
+ *
+ */
+.processing-columns {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.processing-columns li {
+  position: relative;
+  float: left;
+  width: 33.333%;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .processing-columns li {
+    width: 100%;
+    margin-bottom: 33.75px;
+  }
+}
+
+.processing-columns li i {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.processing-columns li::before, .processing-columns li::after {
+  position: absolute;
+  height: 3px;
+  border-top: 3px dotted #404040;
+  content: "";
+  top: 40px;
+  left: 7px;
+  right: 7px;
+}
+
+@media only screen and (max-width: 767px) {
+  .processing-columns li::before, .processing-columns li::after {
+    content: none;
+  }
+}
+
+.processing-columns li::before {
+  width: auto;
+  height: auto;
+  font-family: 'FontAwesome';
+  content: "\f105";
+  border: none;
+  top: 29px;
+  left: auto;
+  right: 0;
+  margin-right: -4px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  .processing-columns li::before {
+    content: none;
+  }
+}
+
+.processing-columns li:first-child:after {
+  left: auto;
+  width: 50%;
+}
+
+.processing-columns li:last-child:after {
+  width: 50%;
+  left: 7px;
+  right: auto;
+}
+
+.processing-columns li:last-child::before {
+  content: none;
+}
+
+.processing-columns li .icon-circle {
+  position: relative;
+  display: inline-block;
+  text-indent: 2px;
+  color: #404040;
+  width: 82px;
+  height: 82px;
+  font-size: 32px;
+  line-height: 82px;
+  text-align: center;
+  overflow: hidden;
+  text-indent: -1px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.processing-columns li p:last-of-type {
+  margin-bottom: 0;
+}
+
+.processing-columns .first-step {
+  border: 1px solid gray;
+  background: white;
+}
+
+.processing-columns .second-step {
+  border: 1px solid gray;
+  background: white;
+}
+
+.processing-columns .third-step {
+  border: 1px solid gray;
+  background: white;
+}
+
+/**
+ * components parallax
+ *
+ */
 /************************************************************
 	c20 - Layout - header
 *************************************************************/
@@ -1196,6 +1353,21 @@ to a reusable component.
   .main-menu {
     display: none;
   }
+}
+
+/************************************************************
+	c21 - Layout - Home 01
+*************************************************************/
+/**
+ * layout home01 / processing columns
+ *
+ */
+.process {
+  color: #fff;
+  background-image: url("../img/background/process.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
