@@ -1204,14 +1204,11 @@ to a reusable component.
   padding: 30px 15px;
   margin-bottom: 0;
   color: #fff;
-}
-
-.pricing-table-wrapper .price-cost p {
   margin-bottom: 0;
-  font-size: 1.4em;
+  font-size: 1.8em;
 }
 
-.pricing-table-wrapper .price-cost p span {
+.pricing-table-wrapper .price-cost span {
   font-size: .5em;
 }
 
@@ -1300,6 +1297,10 @@ to a reusable component.
   background: #3A556A;
 }
 
+/**
+ * components currency converter
+ *
+ */
 /************************************************************
 	c20 - Layout - header
 *************************************************************/
