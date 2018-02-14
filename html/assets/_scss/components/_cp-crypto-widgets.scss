@@ -1,0 +1,112 @@
+/**
+ * components currency converter
+ *
+ */
+
+ #currency_converter {
+ 	input.priceInput  {
+ 		height: 40px;
+ 	}
+
+ 	.fromSymbolLabel {
+ 		height:40px;
+ 		line-height: 40px;
+ 	}
+
+ 	.ccc-converter {
+ 		& > div {
+ 			border-width:0 !important;
+ 			border-color: transparent !important;
+ 			padding: 0 !important;
+
+ 		}
+ 	}
+ }
+
+
+
+/**
+ * BTC chart Widget
+ *
+ */
+
+ #btc_chart_widget {
+ 	.ccc-widget {
+ 		width:100%;
+		@include flex-center(center, center);
+
+ 		canvas {
+ 			width:100% !important;
+ 			max-width:100% !important;
+ 		}
+ 	}
+ 	.ccc-coin-container,
+ 	.ccc-coin-container,
+ 	.ccc-chart {
+ 		margin-left: 15px;
+ 		margin-right: 15px;
+ 	}
+
+ }
+
+
+ /**
+  * Historical Price
+  *
+  */
+
+  #historical_price {
+  	.ccc-widget {
+  		& > div {
+  			border:1px solid $cx-border-color !important;	
+  		}
+  	}
+
+  	.histoTitle {
+  		background: $cx-primary-color;
+  		color: #fff;
+  		margin: 0;
+  		padding:10px 15px;
+  	}
+
+  	.histoRow {
+  		padding: 10px 30px;
+  	}
+  }
+
+
+  /**
+   * currency carousel
+   *
+   */
+
+   #marque_rate {
+
+   	.ccc-widget {
+   		background-color: transparent !important;
+   	}
+
+	.ccc-header-v3-price-name,
+   	.ccc-header-v3-price-value {
+   		color: #fff !important;
+   	} 
+
+   	.ccc-header-v3-ccc-price-container {
+   		img {
+   			margin-right: 7px;
+   			@include border-radius(50%);
+   		}
+   	}
+
+   }
+
+   .currency-carousel{
+   		margin-bottom: 0;
+   		padding-top:10px;
+   		padding-bottom: 10px;
+   		position: fixed;
+   		bottom:0;
+   		left:0;
+   		//background-color: lighten($cx-tertiary-color, 10%);
+   		background-color: $cx-fifth-color;
+   }

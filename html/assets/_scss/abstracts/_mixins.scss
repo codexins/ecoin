@@ -356,3 +356,34 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+//
+
+@mixin flex-center($justifyContent: center, $alignItems: center) {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: $justifyContent;
+    -moz-justify-content: $justifyContent;
+    -ms-justify-content: $justifyContent;
+    -o-justify-content: $justifyContent;
+    justify-content: $justifyContent;
+    -webkit-align-items: $alignItems;
+    -moz-align-items: $alignItems;
+    -ms-align-items: $alignItems;
+    -o-align-items: $alignItems;
+    align-items: $alignItems;
+    @include respond-to(mobile) {
+        display: block;
+        width:100%;
+    }
+
+    & > div {
+        @include respond-to(mobile) {
+            width:100%;
+            margin-bottom: $cx-col-spacing-mob;
+        }
+    }
+}

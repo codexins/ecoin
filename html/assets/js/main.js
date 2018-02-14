@@ -577,17 +577,8 @@ INDEX:
 	};
 
 	/************************************************************
-		s19 - Load Crypto Widgets on specific div
+		s99 - execute all functions
 	*************************************************************/
-
-	// $("#marquee_rate").append($("<script />", {
-	//   src: 'assets/js/crypto-widgets/marquee-rate.js'
-	// }));
-
-	// $("#tabbed_price_list").append($("<script />", {
-	//   src: 'assets/js/crypto-widgets/tabbed-price-list.js'
-	// }));
-                                
 
 
     // Window load functions
