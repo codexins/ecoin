@@ -340,7 +340,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h2 class="primary-title">Why Use Cryptocurrency?</h2>
+                            <h2 class="primary-title">Why Use Bitcoin?</h2>
                             <div class="info-carousel">
                                 <div class="info-box">
                                     <img src="assets/img/flaticons/015-bitcoin-66.svg" alt="">
@@ -520,7 +520,7 @@
                 </div>
             </section>
 
-            <section class="pricing bgc-offset pt-full pb-half">
+            <section class="pricing bgc-offset pt-full pb-half mb0">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
@@ -619,53 +619,128 @@
                 </div> <!-- end of container -->
             </section> <!-- end of pricing -->
 
-            <section class="promo">
+            <section class="converter vpadding mb0">
                 <div class="container">
-                    <div class="row">
+                    <div class="row eqheight">
                         <div class="col-xs-12 col-sm-6">
-                            <div class="converter-wrapper">
-                                <h2>Latest Conversion Rate</h2>
-                                <!-- <script src="https://www.cryptonator.com/ui/js/widget/calc_widget.js"></script> -->
+                            <div class="counter">
+                                <div class="counter-item type-03">
+                                    <div class="counter-icon"><img src="assets/img/flaticons/063-bitcoin-32.svg" alt=""></div>
+                                    <div class="counter-text">
+                                        <p class="counter-number"><span class="timer" data-to="124" data-speed="3000">124</span></p>
+                                        <p class="counter-title">Web Projects</p>
+                                    </div>
+                                </div>
+
+                                <div class="counter-item type-03">
+                                    <div class="counter-icon"><img src="assets/img/flaticons/063-bitcoin-32.svg" alt=""></div>
+                                    <div class="counter-text">
+                                        <p class="counter-number"><span class="timer" data-to="1132" data-speed="3000">1132</span></p>
+                                        <p class="counter-title">Web Projects</p>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="counter">    
 
+                                <div class="counter-item type-03">
+                                    <div class="counter-icon"><img src="assets/img/flaticons/063-bitcoin-32.svg" alt=""></div>
+                                    <div class="counter-text">
+                                        <p class="counter-number"><span class="timer" data-to="745" data-speed="3000">745</span></p>
+                                        <p class="counter-title">Web Projects</p>
+                                    </div>
+                                </div>
+
+                                <div class="counter-item type-03">
+                                    <div class="counter-icon"><img src="assets/img/flaticons/063-bitcoin-32.svg" alt=""></div>
+                                    <div class="counter-text">
+                                        <p class="counter-number"><span class="timer" data-to="132" data-speed="3000">132</span></p>
+                                        <p class="counter-title">Web Projects</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                            <!-- <div id="gobtc-widget-chart" style="background-color:#fcfcfc" data-lang="en"></div> -->
+                            <div id="currency_converter">
+                                <script type="text/javascript">
+                                    baseUrl = "https://widgets.cryptocompare.com/";
+                                    var scripts = document.getElementsByTagName("script");
+                                    var embedder = scripts[ scripts.length - 1 ];
+                                    (function (){
+                                    var appName = encodeURIComponent(window.location.hostname);
+                                    if(appName==""){appName="local";}
+                                    var s = document.createElement("script");
+                                    s.type = "text/javascript";
+                                    s.async = true;
+                                    var theUrl = baseUrl+'serve/v1/coin/converter?fsym=BTC&tsyms=USD,EUR,CNY,GBP';
+                                    s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                    embedder.parentNode.appendChild(s);
+                                    })();
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="call-to-action">
+            <section class="cta-centered has-bg parallax">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12">
-                            <div id="currency_converter"></div>
-                            <script src="assets/js/crypto-widgets/currency-converter.js"></script>
+                        <div class="col-xs-12 col-md-12 col-lg-8 col-lg-offset-2">
+                            <h2>Not Found Your Questions? Just Ask Us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias a, corporis accusantium aut quia adipisci minus consequuntur id natus animi.</p>
+                            <a href="contact-us-01.html" class="default-btn">Contact Now</a>
                         </div>
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+            </section> <!-- end of cta-centered -->
 
-
-
-                        <div class="col-xs-12 mt-half">
-                            <div id="btc_chart_widget"></div>
-                            <script src="assets/js/crypto-widgets/btc-chart-widget.js"></script>
+            <section class="chart-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div id="currency_price">
+                                <script type="text/javascript">
+                                baseUrl = "https://widgets.cryptocompare.com/";
+                                var scripts = document.getElementsByTagName("script");
+                                var embedder = scripts[ scripts.length - 1 ];
+                                (function (){
+                                var appName = encodeURIComponent(window.location.hostname);
+                                if(appName==""){appName="local";}
+                                var s = document.createElement("script");
+                                s.type = "text/javascript";
+                                s.async = true;
+                                var theUrl = baseUrl+'serve/v1/coin/list?fsym=BTC&tsyms=USD,EUR,CNY,GBP,SGD,RUB,JPY,KRW';
+                                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                embedder.parentNode.appendChild(s);
+                                })();
+                                </script>
+                            </div>
                         </div>
-
-                        <div class="col-xs-12 mt-half">
-                            <div id="historical_price"></div>
-                            <script src="assets/js/crypto-widgets/historical-price.js"></script>
+                        <div class="col-xs-12 col-sm-6">
+                            <div id="historical_price">
+                                <script type="text/javascript">
+                                    baseUrl = "https://widgets.cryptocompare.com/";
+                                    var scripts = document.getElementsByTagName("script");
+                                    var embedder = scripts[ scripts.length - 1 ];
+                                    (function (){
+                                    var appName = encodeURIComponent(window.location.hostname);
+                                    if(appName==""){appName="local";}
+                                    var s = document.createElement("script");
+                                    s.type = "text/javascript";
+                                    s.async = true;
+                                    var theUrl = baseUrl+'serve/v1/coin/histo_week?fsym=BTC&tsym=USD';
+                                    s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                    embedder.parentNode.appendChild(s);
+                                    })();
+                                </script>
+                            </div>
                         </div>
-
-
-                        <div class="col-xs-12 mt-half">
-                            <div id="currency_price"></div>
-                            <script src="assets/js/crypto-widgets/currency-price-normal.js"></script>
-                        </div>
-
-
                     </div>
                 </div>
             </section>
+
+
         </main> <!-- end of main -->
 
         <footer>
@@ -754,9 +829,23 @@
                 <p>&copy; Copyright - 2018. All rights reserverd by <a href="http://themeitems.com" target="_blank">themeitems.com</a></p>
             </div> <!-- end of copyright-section -->
 
-            <section class="currency-carousel">
-                <div id="marque_rate"></div>
-                <script src="assets/js/crypto-widgets/marquee-rate.js"></script>
+            <section id="marque_rate" class="currency-carousel">
+                <script type="text/javascript">
+                    var baseUrl = "https://widgets.cryptocompare.com/";
+                    var scripts = document.getElementsByTagName("script");
+                    var embedder = scripts[ scripts.length - 1 ];
+                    var cccTheme = {"General":{"priceText":"#404040","enableMarquee":false},"Currency":{"color":"#404040"},"Trend":{"colorDown":"#cf4e3e"}};
+                    (function (){
+                    var appName = encodeURIComponent(window.location.hostname);
+                    if(appName==""){appName="local";}
+                    var s = document.createElement("script");
+                    s.type = "text/javascript";
+                    s.async = true;
+                    var theUrl = baseUrl+'serve/v3/coin/header?fsyms=BTC,ETH,XMR,LTC,DASH&tsyms=USD,EUR,CNY,GBP';
+                    s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                    embedder.parentNode.appendChild(s);
+                    })();
+                </script>
             </section> <!-- end of currency-carousel -->
 
         </footer> <!-- end of footer -->

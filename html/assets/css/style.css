@@ -291,13 +291,13 @@ input[type="button"]:hover {
 /************************************************************
 	c02 - Base - Placeholders
 *************************************************************/
-.vpadding {
+.vpadding, .cta-centered.has-bg {
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
 @media only screen and (max-width: 767px) {
-  .vpadding {
+  .vpadding, .cta-centered.has-bg {
     padding-top: 67.5px;
     padding-bottom: 67.5px;
   }
@@ -1305,6 +1305,10 @@ to a reusable component.
   height: 40px;
 }
 
+#currency_converter .ccc-widget > div {
+  background: transparent !important;
+}
+
 #currency_converter .fromSymbolLabel {
   height: 40px;
   line-height: 40px;
@@ -1377,7 +1381,7 @@ to a reusable component.
   background: #2D93BA;
   color: #fff;
   margin: 0;
-  padding: 10px 15px;
+  padding: 10px 15px 11px;
 }
 
 #historical_price .histoRow {
@@ -1413,6 +1417,193 @@ to a reusable component.
   bottom: 0;
   left: 0;
   background-color: #3A556A;
+}
+
+/**
+    * currency price
+    *
+    */
+#currency_price .ccc-widget a {
+  padding-top: 5px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ccc !important;
+}
+
+#currency_price .ccc-widget > div {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
+  border: 1px solid #ccc !important;
+}
+
+#currency_price .ccc-widget > div a:last-child {
+  border-bottom: 0 !important;
+}
+
+#currency_price .ccc-widget .header-div {
+  height: 46px !important;
+  padding-top: 7px !important;
+  padding-bottom: 4px !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+#currency_price .ccc-widget .header-div a {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 0 !important;
+}
+
+#currency_price .ccc-widget .header-div a:last-child {
+  border-bottom: 1px solid #eee !important;
+}
+
+/**
+ * components cta (call to action)
+ *
+ */
+.cta-centered {
+  text-align: center;
+}
+
+.cta-centered.has-bg {
+  background-image: url("../img/slider/home-1/slide-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.cta-centered.has-bg {
+  position: relative;
+}
+
+.cta-centered.has-bg:before {
+  background: rgba(0, 0, 0, 0.65);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cta-centered.has-bg .default-btn {
+  background: #2D93BA;
+  border-color: #2D93BA;
+  color: #fff;
+}
+
+.cta-centered.has-bg .default-btn:hover {
+  background: #3EA69B;
+  border-color: #3EA69B;
+}
+
+/**
+ * components counter
+ *
+ */
+.counter {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .counter {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .counter > div {
+    width: 100%;
+    margin-bottom: 33.75px;
+  }
+}
+
+.counter .counter-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  margin-right: 50px;
+  margin-bottom: 45px;
+}
+
+@media only screen and (max-width: 767px) {
+  .counter .counter-item {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .counter .counter-item > div {
+    width: 100%;
+    margin-bottom: 33.75px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .counter .counter-item {
+    margin-bottom: 33.75px;
+  }
+}
+
+.counter .counter-icon {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.counter .counter-icon img {
+  display: block;
+}
+
+.counter .counter-number {
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.1em;
+}
+
+.counter .counter-title {
+  margin-bottom: 0;
 }
 
 /************************************************************
@@ -1614,6 +1805,44 @@ to a reusable component.
 
 .process .processing-columns li::after {
   border-color: #fff;
+}
+
+/**
+ * layout home01/ converter
+ *
+ */
+.converter {
+  background-image: url("../img/background/bitcoin-pixabay.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.converter {
+  position: relative;
+}
+
+.converter:before {
+  background: rgba(255, 255, 255, 0.94);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.converter .converter-left {
+  background-image: url("../img/background/converter.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.converter .converter-right {
+  padding-left: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

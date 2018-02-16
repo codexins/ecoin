@@ -8,6 +8,13 @@
  		height: 40px;
  	}
 
+  .ccc-widget {
+    & > div {
+      background: transparent !important;  
+    }
+    
+  }
+
  	.fromSymbolLabel {
  		height:40px;
  		line-height: 40px;
@@ -66,7 +73,7 @@
   		background: $cx-primary-color;
   		color: #fff;
   		margin: 0;
-  		padding:10px 15px;
+  		padding:10px 15px 11px;
   	}
 
   	.histoRow {
@@ -110,3 +117,55 @@
    		//background-color: lighten($cx-tertiary-color, 10%);
    		background-color: $cx-fifth-color;
    }
+
+
+   /**
+    * currency price
+    *
+    */
+
+#currency_price {
+  .ccc-widget {
+    a {
+      padding-top: 5px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $cx-border-color !important;
+    }
+
+    & > div {
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        -ms-border-radius: 0 !important;
+        -o-border-radius: 0 !important;
+        border-radius: 0 !important;
+        border: 1px solid $cx-border-color !important;
+        a {
+            &:last-child {
+                border-bottom: 0 !important;
+            }
+        }
+
+    }
+
+    .header-div {
+        height: 46px !important;
+        padding-top: 7px !important;
+        padding-bottom: 4px !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        -ms-border-radius: 0 !important;
+        -o-border-radius: 0 !important;
+        border-radius: 0 !important;
+        border-bottom: 1px solid $cx-border-color !important;
+        a {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom:0 !important;
+            &:last-child {
+                border-bottom: 1px solid #eee !important;
+            }
+        }
+
+    }
+  }
+}

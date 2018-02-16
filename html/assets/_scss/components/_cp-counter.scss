@@ -1,0 +1,35 @@
+/**
+ * components counter
+ *
+ */
+
+ .counter {
+ 	@include flex-center(flex-start, center);
+ 	.counter-item {
+ 		@include flex-center(flex-start, center);
+ 		margin-right: 50px;
+ 		margin-bottom: $cx-col-spacing;
+ 		@include respond-to(mobile) {
+ 			margin-bottom: $cx-col-spacing-mob;
+ 		}
+ 	}
+
+ 	.counter-icon {
+ 		@include box(80px, 80px);
+ 		margin-right: 15px;
+ 		img {
+ 			display: block;
+ 		}
+ 	}
+
+ 	.counter-number {
+	    margin-bottom: 0;
+    	font-size: 50px;
+    	font-weight: bold;
+    	line-height: 1.1em;
+ 	}
+
+ 	.counter-title {
+		margin-bottom: 0;
+ 	}
+ }

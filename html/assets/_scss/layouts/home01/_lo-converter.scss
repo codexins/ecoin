@@ -1,0 +1,17 @@
+/**
+ * layout home01/ converter
+ *
+ */
+
+ .converter {
+ 	@include cx-background('../img/background/bitcoin-pixabay.jpg');
+ 	@include cx-overlay(rgba(255,255,255,.94));
+ 	.converter-left {
+ 		@include cx-background('../img/background/converter.jpg');
+ 		height:100%;
+ 	}
+ 	.converter-right {
+ 		padding-left: 30px;
+ 	}
+ }
+

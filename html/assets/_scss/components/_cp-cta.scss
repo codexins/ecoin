@@ -1,0 +1,26 @@
+/**
+ * components cta (call to action)
+ *
+ */
+
+ .cta-centered {
+ 	text-align: center;
+ 	&.has-bg {
+ 		@include cx-background('../img/slider/home-1/slide-2.jpg');
+ 		@include cx-overlay(rgba(0,0,0,.65));
+ 		@extend %vpadding;
+ 		color:#fff;
+
+ 		.default-btn {
+ 			background: $cx-primary-color;
+ 			border-color: $cx-primary-color;
+ 			color: #fff;
+ 			&:hover {
+ 				background: $cx-secondary-color;
+ 				border-color: $cx-secondary-color;
+ 			}
+ 		}
+ 	}
+	
+
+ }

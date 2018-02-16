@@ -243,12 +243,14 @@ INDEX:
     *************************************************************/
 
     CODEXIN.animatedCounter = function() {
-    	if ($counter.cxExists()) {
-	        $counter.counterUp({
-	            delay: 100,
-	            time: 3000
-	        });
-	    }
+     if ($counter.cxExists()) {
+         $counter.each(function () {
+           var $elem = $(this);                 
+             $elem.appear(function () {
+               $elem.find('.timer').countTo();
+            });                  
+         });
+     }
     };
 
 
