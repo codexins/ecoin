@@ -88,6 +88,7 @@ INDEX:
 				autoplay:false,
 				forceSize: 'fullWidth',
 				responsive: true,
+				orientation: 'vertical',
 				breakpoints: {
 					1199: {
 						height: 470,
@@ -206,36 +207,24 @@ INDEX:
 
 
     /************************************************************
-        s08 - Intelligent Header Space
+        s08 - Intelligent Header
     *************************************************************/
 
-	CODEXIN.headerPlaceholder = function() {
-        var intHeight = $intelHeader.outerHeight();
-        $(".intelligent-header-space").height(intHeight);
+	CODEXIN.headerAutoFixed = function() {
+		var wrap = $("header");
+		var intHeight = $(".intelligent-header").outerHeight();
+	    $window.on('scroll', function() {
+	        if ($window.scrollTop() > intHeight) {
+	            wrap.addClass("fix-navigation");
+	            $(".intelligent-header-space").height('56px');
+	        } else {
+	            wrap.removeClass("fix-navigation");
+	            $(".intelligent-header-space").height('0');
+	        }
+	    });
     };
 
 
-    /************************************************************
-        s09 - Headroom Js for Auto Hide the header on scroll
-    *************************************************************/
-
-    CODEXIN.headerAutoHide = function() {
-	    var navContainer = document.querySelector(".intelligent-header");
-	    // construct an instance of Headroom, passing the element
-	    var headroom = new Headroom(navContainer);
-	    // initialise
-	    headroom.init();
-
-	    $window.on('scroll', function() {
-	        var height = $window.scrollTop();
-
-	        if (height < 200) {
-	            $intelHeader.removeClass('scrolling-up');
-	        } else {
-	            $intelHeader.addClass('scrolling-up');
-	        }
-	    });
-	};
 
 
     /************************************************************
@@ -578,6 +567,9 @@ INDEX:
 	    };
 	};
 
+
+
+
 	/************************************************************
 		s99 - execute all functions
 	*************************************************************/
@@ -597,7 +589,6 @@ INDEX:
     	CODEXIN.fullscreenVideoHeader(),
     	CODEXIN.backgroundSliderHeader(),
     	CODEXIN.mainNav(),
-    	CODEXIN.headerAutoHide(),
     	CODEXIN.animatedCounter(),
     	CODEXIN.responsiveMenu(),
     	CODEXIN.responsiveSubMenu(),
@@ -613,7 +604,7 @@ INDEX:
     // Window load and resize functions
     $window.on('load resize', function() {
         CODEXIN.fullscreenHeader(),
-        CODEXIN.headerPlaceholder();
+        CODEXIN.headerAutoFixed();
     });
 
 })(jQuery);

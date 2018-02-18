@@ -6,7 +6,7 @@
  .default-btn {
  	@include button;
  	.sp-layer & {
- 		color: #fff;
+ 		color: $cx-white-color;
  		background-color: $cx-primary-color;
  		border-color: $cx-primary-color;
  		@include cx-transition($cx-transition);
@@ -15,4 +15,18 @@
  			border-color: $cx-secondary-color;
  		}
  	}
+ }
+
+
+
+ .quote-btn {
+ 	background: $cx-primary-color;
+ 	color: $cx-white-color;
+ 	padding: 12px 15px;
+ 	&:focus,
+ 	&:hover {
+		color: $cx-white-color;
+		background: $cx-secondary-color;
+ 	}
+
  }

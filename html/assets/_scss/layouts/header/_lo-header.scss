@@ -5,7 +5,6 @@
  
 .logo {
 	max-width:167px;
-	margin-top: 11px;
 	a{
 		display: block;
 		width:100%;
@@ -22,3 +21,13 @@
 	}
 }
 
+.logo-area {
+	padding:15px 0;
+	@extend %clearfix;
+}
+
+.header-box {
+	p {
+		margin-bottom: 0;
+	}
+}

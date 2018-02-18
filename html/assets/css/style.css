@@ -138,7 +138,7 @@ body {
   line-height: 1.6em;
   color: #404040;
   font-weight: 400;
-  background: #fff;
+  background: #ffffff;
 }
 
 h1 {
@@ -315,16 +315,16 @@ input[type="button"]:hover {
   }
 }
 
-.whole-wrapper {
+.whole-wrapper, .logo-area {
   zoom: 1;
 }
 
-.whole-wrapper::before, .whole-wrapper::after {
+.whole-wrapper::before, .logo-area::before, .whole-wrapper::after, .logo-area::after {
   content: "";
   display: table;
 }
 
-.whole-wrapper::after {
+.whole-wrapper::after, .logo-area::after {
   clear: both;
 }
 
@@ -406,7 +406,7 @@ a, .default-btn, .main-menu li, .main-menu li ul {
   background-color: #3EA69B;
 }
 
-.bgc-tertiary, .header-top {
+.bgc-tertiary {
   background-color: #2c2c2c;
 }
 
@@ -426,7 +426,7 @@ a, .default-btn, .main-menu li, .main-menu li ul {
   background-color: #fff;
 }
 
-.color-primary, a, .header-top a:focus, .header-top a:hover {
+.color-primary, a {
   color: #2D93BA;
 }
 
@@ -450,8 +450,12 @@ a, .default-btn, .main-menu li, .main-menu li ul {
   color: #e5e4e3;
 }
 
-.color-white, .header-top, .header-top a {
+.color-white {
   color: #fff;
+}
+
+.search-bar form input[type="submit"] {
+  color: #404040;
 }
 
 .nomargin {
@@ -739,7 +743,7 @@ to a reusable component.
 }
 
 .sp-layer .default-btn {
-  color: #fff;
+  color: #ffffff;
   background-color: #2D93BA;
   border-color: #2D93BA;
   -webkit-transition: all 0.3s ease;
@@ -752,6 +756,17 @@ to a reusable component.
 .sp-layer .default-btn:hover {
   background-color: #3EA69B;
   border-color: #3EA69B;
+}
+
+.quote-btn {
+  background: #2D93BA;
+  color: #ffffff;
+  padding: 12px 15px;
+}
+
+.quote-btn:focus, .quote-btn:hover {
+  color: #ffffff;
+  background: #3EA69B;
 }
 
 /**
@@ -1519,7 +1534,6 @@ to a reusable component.
  */
 .logo {
   max-width: 167px;
-  margin-top: 11px;
 }
 
 .logo a {
@@ -1539,6 +1553,14 @@ to a reusable component.
   }
 }
 
+.logo-area {
+  padding: 15px 0;
+}
+
+.header-box p {
+  margin-bottom: 0;
+}
+
 /**
  * Layout header/ Header Top
  *
@@ -1546,12 +1568,38 @@ to a reusable component.
 .header-top {
   padding: 7px 0;
   font-size: .875em;
+  background: #2c2c2c;
+  color: #ffffff;
+  height: 40px;
+  overflow: hidden;
+}
+
+.header-top a {
+  color: #ffffff;
+}
+
+.header-top a:focus, .header-top a:hover {
+  color: #2D93BA;
+}
+
+.header-top .quote-btn {
+  height: 40px;
+  margin-left: 15px;
+  padding: 12px 15px;
+}
+
+.header-top .quote-btn:hover {
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 599px) {
   .header-top {
     display: none;
   }
+}
+
+.header-top .social-icons {
+  display: inline-block;
 }
 
 .top-content {
@@ -1562,17 +1610,128 @@ to a reusable component.
   margin: 0 5px;
 }
 
+.top-content a {
+  position: relative;
+  padding-left: 7px;
+  padding-right: 5px;
+}
+
+.top-content a:first-child {
+  padding-right: 10px;
+}
+
+.top-content a:first-child::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background: #ffffff;
+  top: 0;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.header-box-wrapper {
+  float: right;
+  width: auto;
+}
+
+.header-box-wrapper .header-box:first-child {
+  float: left;
+  margin-right: 50px;
+}
+
+.header-box-wrapper .header-box:last-child {
+  float: right;
+}
+
+.header-box .box-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  float: left;
+  border: 1px solid #ccc;
+  margin-right: 15px;
+}
+
+.header-box .box-icon i {
+  font-size: 20px;
+}
+
+.header-box .box-content {
+  float: right;
+}
+
+.logo-area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo-area {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .logo-area > div {
+    width: 100%;
+    margin-bottom: 33.75px;
+  }
+}
+
+/**
+ * layout header/ Intelligent Header
+ *
+ */
+.fix-navigation .menu-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+
 /**
  * Layout header/ Main Menu
  *
  */
+.menu-wrapper {
+  background: #e5e4e3;
+}
+
 .main-menu {
-  float: right;
+  float: left;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 .main-menu > li {
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 .main-menu > li > a {
@@ -1585,7 +1744,7 @@ to a reusable component.
 
 .main-menu li {
   float: left;
-  margin-left: 30px;
+  margin-right: 30px;
   position: relative;
   list-style-type: none;
 }
@@ -1675,6 +1834,59 @@ to a reusable component.
   .main-menu {
     display: none;
   }
+}
+
+.menu-wrapper .search-bar {
+  float: right;
+}
+
+.menu-wrapper .search-bar input {
+  margin-bottom: 0;
+  height: 40px;
+}
+
+.menu-wrapper .primary-nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-wrapper .primary-nav {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-wrapper .primary-nav > div {
+    width: 100%;
+    margin-bottom: 33.75px;
+  }
+}
+
+.search-bar form {
+  position: relative;
+}
+
+.search-bar form input[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: 0;
 }
 
 /************************************************************
