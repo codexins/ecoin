@@ -88,7 +88,6 @@ INDEX:
 				autoplay:false,
 				forceSize: 'fullWidth',
 				responsive: true,
-				orientation: 'vertical',
 				breakpoints: {
 					1199: {
 						height: 470,
@@ -549,6 +548,33 @@ INDEX:
             });
         }
     };
+
+    /************************************************************
+    	vertical carousel
+    *************************************************************/
+
+    var $slider = $("#slider");
+	$slider.on('init', function () {
+		mouseWheel($slider);
+	}).slick({
+		dots: true,
+		vertical: true,
+		infinite: true,
+		arrows: false
+	});
+	function mouseWheel($slider) {
+		$(".scroll-wrap").on('wheel', { $slider: $slider }, mouseWheelHandler);
+	}
+	function mouseWheelHandler(event) {
+		event.preventDefault();
+		var $slider = event.data.$slider;
+		var delta = event.originalEvent.deltaY;
+		if (delta > 0) {
+			$slider.slick('slickPrev');
+		} else {
+			$slider.slick('slickNext');
+		}
+	}
 
     /************************************************************
     	s19 - Parallax JS

@@ -654,14 +654,101 @@
 
             <section class="converter">
                 <div class="container">
-                    <div class="row eqheight">
+                    <div class="row">
                         <div class="col-sm-6">
-                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur atque exercitationem harum officia error, natus, provident saepe facere id quasi voluptates, cum maxime sunt necessitatibus quam, dignissimos nobis reiciendis architecto.</h2>
+                            <div class="scroll-wrap">
+                                <div class="slider" id="slider">
+                                    <div>
+                                        <h3>Sare Exit Done</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae animi corrupti laudantium aliquid similique. Excepturi!</p>
+                                    </div>
+                                    <div>
+                                        <h3>Sare Exit Done</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae animi corrupti laudantium aliquid similique. Excepturi!</p>
+                                    </div>
+                                    <div>
+                                        <h3>Sare Exit Done</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae animi corrupti laudantium aliquid similique. Excepturi!</p>
+                                    </div>
+                                    <div>
+                                        <h3>Sare Exit Done</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae animi corrupti laudantium aliquid similique. Excepturi!</p>
+                                    </div>
+                                </div> <!-- end of slider -->
+                            </div> <!-- end of scroll-wrap -->
                         </div>
 
                         <div class="col-sm-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa temporibus, iste error. Ea doloremque maiores odit perferendis! Impedit, blanditiis, commodi.</p>
+
+                            <div class="currency-calculator">
+                            <h2>Calculate Price Now!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                <script type="text/javascript">
+                                baseUrl = "https://widgets.cryptocompare.com/";
+                                var scripts = document.getElementsByTagName("script");
+                                var embedder = scripts[ scripts.length - 1 ];
+                                var cccTheme = {"General":{"borderWidth":"0px","headerTextColor":"#404040","poweredByColor":"#404040"},"Form":{"inputColor":"#404040"}};
+                                (function (){
+                                var appName = encodeURIComponent(window.location.hostname);
+                                if(appName==""){appName="local";}
+                                var s = document.createElement("script");
+                                s.type = "text/javascript";
+                                s.async = true;
+                                var theUrl = baseUrl+'serve/v1/coin/converter?fsym=BTC&tsyms=USD,EUR,CNY,GBP';
+                                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                embedder.parentNode.appendChild(s);
+                                })();
+                                </script>
+
+                                <a href="" class="default-btn">Buy Now</a>
+                            </div> <!-- end of currency-calculator -->
+
                         </div>
+                    </div> <!-- end of row -->
+                </div> <!-- wnd of container -->
+            </section> <!-- end of converter -->
+
+            <section class="crypto-price">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <p>Last Week's Rate</p>
+                            <h2>Cryptocurrency Historical Price</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis commodi rerum, vero omnis! Corporis, deleniti?</p>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div class="crypto-price-list">
+                                <script type="text/javascript">
+                                    baseUrl = "https://widgets.cryptocompare.com/";
+                                    var scripts = document.getElementsByTagName("script");
+                                    var embedder = scripts[ scripts.length - 1 ];
+                                    var cccTheme = {"General":{"borderWidth":"0px","textColor":"#404040"},"Rows":{"textColor":"#404040"},"Conversion":{"color":"#404040"}};
+                                    (function (){
+                                    var appName = encodeURIComponent(window.location.hostname);
+                                    if(appName==""){appName="local";}
+                                    var s = document.createElement("script");
+                                    s.type = "text/javascript";
+                                    s.async = true;
+                                    var theUrl = baseUrl+'serve/v1/coin/histo_week?fsym=BTC&tsym=USD';
+                                    s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                    embedder.parentNode.appendChild(s);
+                                    })();
+                                </script>
+
+                            </div>
+                        </div>
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+            </section> <!-- end of crypto-price -->
+
+            <section class="crypto-chart-area bgc-offset vpadding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, dolorum?</p>
+                        </div>
+                        <div class="col-sm-6"></div>
                     </div>
                 </div>
             </section>

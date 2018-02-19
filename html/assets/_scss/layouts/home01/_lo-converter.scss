@@ -4,14 +4,130 @@
  */
 
  .converter {
+ 	position: relative;
  	@include cx-background('../img/background/bitcoin-pixabay.jpg');
- 	@include cx-overlay(rgba(255,255,255,.94));
+ 	@include cx-overlay(rgba($cx-fifth-color, .65));
  	.converter-left {
- 		@include cx-background('../img/background/converter.jpg');
- 		height:100%;
+ 		
+ 		
  	}
  	.converter-right {
- 		padding-left: 30px;
+ 		
+ 	}
+
+ 	&::after {
+ 		content:"";
+ 		background-color:$cx-secondary-color;
+ 		position: absolute;
+ 		width:50%;
+ 		height:100%;
+ 		display: block;
+ 		right:0;
+ 		top:0;
+ 	}
+
+ 	a.default-btn {
+		position:absolute;
+		bottom:50px;
+		top:auto;
+		left:45px;
+		right:45px;
+		text-align: center;
+		background: $cx-secondary-color;
+		border-color: $cx-secondary-color;
+		color:$cx-white-color;
  	}
  }
 
+ .currency-calculator {
+ 	position: relative;
+ 	z-index: 1;
+ 	margin:50px 0 50px 50px;
+ 	padding:30px 30px 100px 30px;
+ 	background: $cx-white-color;
+ 	.section-converter-ccc {
+ 		.fromSymbolLabel {
+ 			height:40px;
+ 			line-height: 40px;
+ 		}
+ 	}
+
+ 	.histoTitleConverter {
+ 		display: none;
+ 	}
+
+ 	h2, p {
+ 		text-align: center;
+ 	}
+
+ 	h2 {
+ 		margin-bottom: 0;
+ 	}
+
+ 	p {
+ 		margin-bottom: 0;
+ 	}
+
+ 	.poweredByWrapper {
+ 		display: none;
+ 	}
+
+ 	.convertForm {
+ 		label {
+ 			margin-bottom: 0;
+ 			font-weight: normal;
+ 		}
+ 	}
+
+ }
+
+
+// left side
+
+.scroll-wrap {
+	position: relative;
+	height:515px;
+}
+
+.scroll-wrap .slick-dots {
+	width:30px;
+	@include cx-centered(vertical);	
+	right:-45px;
+	bottom:auto;
+}
+
+.scroll-wrap .slider {
+  margin: 0 100px 0 0;
+  @include cx-centered(vertical);
+}
+
+.scroll-wrap .slick-slide {
+  background: transparent;
+  color: white;
+  padding: 40px 0;
+}
+
+.scroll-wrap .slick-prev::before,
+.scroll-wrap .slick-next::before {
+  color: black;
+}
+
+
+
+.scroll-wrap .slick-dots li {
+	display: block;
+}
+
+
+.scroll-wrap .slider {
+	h1, p {
+		margin-bottom: 0;
+	}
+}
+
+
+.scroll-wrap .slick-dots li button:before {
+	content:"";
+	background: $cx-white-color;
+	@include box(12px, 12px);
+}

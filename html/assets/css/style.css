@@ -1928,6 +1928,7 @@ to a reusable component.
  *
  */
 .converter {
+  position: relative;
   background-image: url("../img/background/bitcoin-pixabay.jpg");
   background-position: center;
   background-size: cover;
@@ -1939,7 +1940,7 @@ to a reusable component.
 }
 
 .converter:before {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(58, 85, 106, 0.65);
   content: "";
   display: block;
   position: absolute;
@@ -1949,16 +1950,127 @@ to a reusable component.
   left: 0;
 }
 
-.converter .converter-left {
-  background-image: url("../img/background/converter.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.converter::after {
+  content: "";
+  background-color: #3EA69B;
+  position: absolute;
+  width: 50%;
   height: 100%;
+  display: block;
+  right: 0;
+  top: 0;
 }
 
-.converter .converter-right {
-  padding-left: 30px;
+.converter a.default-btn {
+  position: absolute;
+  bottom: 50px;
+  top: auto;
+  left: 45px;
+  right: 45px;
+  text-align: center;
+  background: #3EA69B;
+  border-color: #3EA69B;
+  color: #ffffff;
+}
+
+.currency-calculator {
+  position: relative;
+  z-index: 1;
+  margin: 50px 0 50px 50px;
+  padding: 30px 30px 100px 30px;
+  background: #ffffff;
+}
+
+.currency-calculator .section-converter-ccc .fromSymbolLabel {
+  height: 40px;
+  line-height: 40px;
+}
+
+.currency-calculator .histoTitleConverter {
+  display: none;
+}
+
+.currency-calculator h2, .currency-calculator p {
+  text-align: center;
+}
+
+.currency-calculator h2 {
+  margin-bottom: 0;
+}
+
+.currency-calculator p {
+  margin-bottom: 0;
+}
+
+.currency-calculator .poweredByWrapper {
+  display: none;
+}
+
+.currency-calculator .convertForm label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.scroll-wrap {
+  position: relative;
+  height: 515px;
+}
+
+.scroll-wrap .slick-dots {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -45px;
+  bottom: auto;
+}
+
+.scroll-wrap .slider {
+  margin: 0 100px 0 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.scroll-wrap .slick-slide {
+  background: transparent;
+  color: white;
+  padding: 40px 0;
+}
+
+.scroll-wrap .slick-prev::before,
+.scroll-wrap .slick-next::before {
+  color: black;
+}
+
+.scroll-wrap .slick-dots li {
+  display: block;
+}
+
+.scroll-wrap .slider h1, .scroll-wrap .slider p {
+  margin-bottom: 0;
+}
+
+.scroll-wrap .slick-dots li button:before {
+  content: "";
+  background: #ffffff;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  line-height: 12px;
+  display: inline-block;
+}
+
+/**
+ * layout crypto historical price
+ *
+ */
+.crypto-price div.histoTitle {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
