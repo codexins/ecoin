@@ -24,6 +24,13 @@
 .logo-area {
 	padding:15px 0;
 	@extend %clearfix;
+	@include flex-center(flex-start, center);
+	.no-flexbox & {
+		display: block;
+		.header-box-wrapper {
+			margin-top: 7px;
+		}
+	}
 }
 
 .header-box {

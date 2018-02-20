@@ -1,14 +1,16 @@
 /************************************************************
 	c20 - Layout - header
 *************************************************************/
-@import 'header/_lo-header';
-@import 'header/_lo-header-top';
-@import 'header/_lo-intelligent-header';
-@import 'header/_lo-main-menu';
+@import 'header/lo-header';
+@import 'header/lo-header-top';
+@import 'header/lo-intelligent-header';
+@import 'header/lo-main-menu';
 
 /************************************************************
 	c21 - Layout - Home 01
 *************************************************************/
-@import 'home01/_lo-processing';
-@import 'home01/_lo-converter';
-@import 'home01/_lo-crypto-history-price';
+@import 'home01/lo-processing';
+@import 'home01/lo-converter';
+@import 'home01/lo-crypto-history-price';
+@import 'home01/lo-chart-area';
+@import 'home01/lo-testimonial';

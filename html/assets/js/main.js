@@ -373,6 +373,7 @@ INDEX:
 	            slidesToScroll: 1,
 	            asNavFor: ".testimonial-carousel",
 	            centerMode: true,
+	            arrows: false,
 	            focusOnSelect: true,
 	            responsive: [
 	                {

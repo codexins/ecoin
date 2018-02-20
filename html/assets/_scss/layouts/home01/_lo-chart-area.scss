@@ -1,0 +1,31 @@
+/**
+ * layout home01 / chart-area
+ *
+ */
+
+.crypto-chart-area {
+	.secondary-title {
+		margin-top: 10px;
+	}
+
+	a.default-btn {
+		margin-bottom: $cx-col-spacing;
+		@include respond-to(mobile) {
+			margin-bottom: $cx-col-spacing-mob;
+		}
+	}
+
+	.container {
+		.row {
+			@include flex-center(flex-start, center);
+		}
+	}
+}
+
+.chart-wrapper {
+	margin-bottom: $cx-col-spacing;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-col-spacing-mob;
+	}
+}
+

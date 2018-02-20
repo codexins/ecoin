@@ -125,6 +125,8 @@
 	.primary-nav {
 		@include flex-center(space-between, center);
 	}
+
+
 }
 
 .search-bar {
@@ -138,6 +140,18 @@
 			border:0;
 			@extend %color-text;
 
+		}
+	}
+}
+
+
+.no-flexbox {
+	.menu-wrapper {
+		.primary-nav {
+			display: block;
+			.search-bar {
+				margin-top: 8px;
+			}
 		}
 	}
 }
