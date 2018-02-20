@@ -291,13 +291,13 @@ input[type="button"]:hover {
 /************************************************************
 	c02 - Base - Placeholders
 *************************************************************/
-.vpadding, .cta-centered.has-bg, .testimonial-slider {
+.vpadding, .testimonial-slider {
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
 @media only screen and (max-width: 767px) {
-  .vpadding, .cta-centered.has-bg, .testimonial-slider {
+  .vpadding, .testimonial-slider {
     padding-top: 67.5px;
     padding-bottom: 67.5px;
   }
@@ -334,7 +334,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 25px;
 }
 
-a, .default-btn, .main-menu li, .main-menu li ul, .testimonial-nav .slick-slide {
+.cta-section.has-bg {
+  position: relative;
+}
+
+.cta-section.has-bg:before {
+  background: rgba(0, 0, 0, 0.55);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a, .default-btn, .team-single .team-content, .team-single .thumb-img .social-icons, .team-single .thumb-img::before, .main-menu li, .main-menu li ul, .testimonial-nav .slick-slide {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -478,7 +493,8 @@ a, .default-btn, .main-menu li, .main-menu li ul, .testimonial-nav .slick-slide 
   margin-top: 0;
 }
 
-.mb0 {
+.mb0, .cta-section p,
+.cta-section h2 {
   margin-bottom: 0;
 }
 
@@ -604,6 +620,21 @@ to a reusable component.
   text-align: center;
   line-height: 24px;
   display: inline-block;
+}
+
+.social-icons.type02 a {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 36px;
+  background: #ffffff;
+  margin: 2px;
 }
 
 /**
@@ -1484,27 +1515,187 @@ to a reusable component.
 }
 
 /**
- * components cta (call to action)
+ * Components Call to action
  *
  */
-.cta-centered {
-  text-align: center;
+.cta-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  margin-bottom: 0;
 }
 
-.cta-centered.has-bg {
-  background-image: url("../img/slider/home-1/slide-2.jpg");
+@media only screen and (max-width: 767px) {
+  .cta-section {
+    padding-top: 67.5px;
+    padding-bottom: 67.5px;
+    text-align: center;
+  }
+}
+
+.cta-section p,
+.cta-section h2 {
+  color: white;
+}
+
+.cta-section h2 {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section h2 {
+    font-size: 24px;
+  }
+}
+
+.cta-section .row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section .row {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section .row > div {
+    width: 100%;
+    margin-bottom: 33.75px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section .row .cta-content {
+    margin-bottom: 30px;
+  }
+}
+
+.cta-section .row .cta-action {
+  text-align: right;
+}
+
+.cta-section .row .cta-action .default-btn {
+  background: #3EA69B;
+  border-color: #3EA69B;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section .row .cta-action .default-btn {
+    padding: 8px 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section .row .cta-action {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section .row {
+    display: block;
+    width: auto;
+  }
+}
+
+.cta-section.has-bg {
+  background-image: url("../img/CTA/cta-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
 }
 
-.cta-centered.has-bg {
+/**
+ * components counter
+ *
+ */
+/**
+ * components team
+ *
+ */
+.team-single img {
+  width: 100%;
+  display: block;
+}
+
+.team-single .team-content {
+  text-align: center;
+  padding: 40px 15px;
+  background-color: #e5e4e3;
+}
+
+.team-single .team-content h3 {
+  position: relative;
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.team-single .team-content h3::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #5a5a5a;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.team-single .team-content p:last-child {
+  margin-bottom: 0;
+}
+
+.team-single .thumb-img {
   position: relative;
 }
 
-.cta-centered.has-bg:before {
-  background: rgba(0, 0, 0, 0.65);
+.team-single .thumb-img .social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: 38px;
+  text-align: center;
+  opacity: 0;
+}
+
+.team-single .thumb-img .social-icons a {
+  color: #3EA69B;
+}
+
+.team-single .thumb-img .social-icons a:hover {
+  color: #ffffff;
+  background: #3EA69B;
+}
+
+.team-single .thumb-img {
+  position: relative;
+}
+
+.team-single .thumb-img:before {
+  background: rgba(0, 0, 0, 0.75);
   content: "";
   display: block;
   position: absolute;
@@ -1514,21 +1705,32 @@ to a reusable component.
   left: 0;
 }
 
-.cta-centered.has-bg .default-btn {
-  background: #2D93BA;
-  border-color: #2D93BA;
-  color: #fff;
+.team-single .thumb-img::before {
+  opacity: 0;
 }
 
-.cta-centered.has-bg .default-btn:hover {
-  background: #3EA69B;
-  border-color: #3EA69B;
+.team-single:hover .thumb-img::before {
+  opacity: 1;
 }
 
-/**
- * components counter
- *
- */
+.team-single:hover .social-icons {
+  opacity: 1;
+}
+
+.team-single:hover .team-content {
+  background-color: #3EA69B;
+  color: #ffffff;
+}
+
+.team-single:hover h3::before {
+  background: #ffffff;
+}
+
+.team-area .team-single {
+  width: 25%;
+  float: left;
+}
+
 /************************************************************
 	c20 - Layout - header
 *************************************************************/

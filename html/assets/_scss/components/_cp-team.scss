@@ -1,0 +1,95 @@
+/**
+ * components team
+ *
+ */
+
+ .team-single {
+ 	img {
+ 		width:100%;
+ 		display: block;
+ 	}
+
+ 	.team-content {
+ 		text-align: center;
+		padding: 40px 15px;
+ 		background-color: $cx-offset-color;
+ 		@extend %cx-transition;
+ 		h3 {
+ 			position: relative;
+ 			font-size:1.2em;
+ 			margin-top: 15px;
+ 			margin-bottom: 5px;
+ 			letter-spacing: 2px;
+ 			text-transform: uppercase;
+ 			&::before {
+ 				content:"";
+ 				width:40px;
+ 				height: 2px;
+ 				background: lighten($cx-text-color, 10%);
+ 				position: absolute;
+ 				top:-15px;
+ 				left:50%;
+ 				margin-left: -25px;
+ 			}
+ 		}
+
+ 		p:last-child {
+ 			margin-bottom: 0;
+ 		}
+ 	}
+
+	.thumb-img {
+		position: relative;
+		.social-icons {
+			@include cx-centered(both);
+			width:100%;
+			min-height:38px;
+			text-align: center;
+			opacity: 0;
+			@extend %cx-transition;
+			a {
+				color: $cx-secondary-color;
+				&:hover {
+					color: $cx-white-color;
+					background: $cx-secondary-color;
+				}
+			}
+		}
+
+		@include cx-overlay(rgba(0,0,0,.75));
+		&::before {
+			opacity: 0;
+			@extend %cx-transition;
+		}
+	}
+
+ 	&:hover {
+		.thumb-img {
+			&::before {
+				opacity:1;
+			}
+		}
+
+		.social-icons {
+			opacity: 1;
+		}
+
+ 		.team-content {
+ 			background-color: $cx-secondary-color;
+ 			color: $cx-white-color;
+ 		}
+
+ 		h3 {
+ 			&::before {
+ 				background: $cx-white-color;
+ 			}
+ 		}
+ 	}
+ }
+
+.team-area {
+	.team-single {
+		width:25%;
+		float:left;
+	}
+}

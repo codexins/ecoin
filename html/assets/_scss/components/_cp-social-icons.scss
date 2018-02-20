@@ -11,4 +11,12 @@
  		}
 
  	}
+
+	&.type02 {
+		a {
+			@include cx-circle(36px);
+			background: $cx-white-color;
+			margin:2px;
+		}
+	}
  }
