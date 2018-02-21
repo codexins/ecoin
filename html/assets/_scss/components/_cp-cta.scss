@@ -6,7 +6,6 @@
 .cta-section {
 	padding-top:$cx-section-spacing;
 	padding-bottom: $cx-section-spacing;
-	margin-bottom: 0;
 	@include respond-to(mobile) {
 		padding-top: $cx-section-spacing-mob;
 		padding-bottom: $cx-section-spacing-mob;

@@ -1,0 +1,10 @@
+/**
+ * components divider
+ *
+ */
+
+ .divider {
+ 	width:100%;
+ 	height:1px;
+ 	background: lighten($cx-text-color, 30%);
+ }

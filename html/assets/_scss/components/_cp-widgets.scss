@@ -1,0 +1,92 @@
+/**
+ * components widgets
+ *
+ */
+ 
+
+ .footer-widget {
+ 	margin-bottom: $cx-col-spacing;
+ 	@include respond-to(mobile) {
+ 		margin-bottom: $cx-col-spacing-mob;
+ 	}
+ }
+
+.recent-posts-widget {
+	.posts-single {
+		// padding-left: 100px;
+		// position: relative;
+		margin-bottom: $cx-heading-margin-bottom;
+		@extend %clearfix;
+		@include flex-center(flex-start, center);
+
+		a {
+			color: $cx-white-color;
+		}
+
+	}
+
+	.post-thumb {
+		margin-right: 15px;
+	}
+
+	h3 {
+		font-size: 1em;
+		font-weight: bold;
+		margin-bottom: 5px;
+		font-family: $cx-body-font-family;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: .85em;
+		font-style: italic;
+		color: $cx-secondary-color;
+	}
+}
+
+.footer-menu {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+		margin-bottom: 14px;
+		position: relative;
+		padding-left: 15px;
+		@extend %cx-transition;
+		a {
+			color: $cx-white-color;
+
+		}
+
+		&::before {
+			@include abs-position(0, auto, auto, 0);
+			content:"\f105";
+			font-family: FontAwesome;
+		}
+
+		&:hover {
+			padding-left: 18px;
+			a {
+				color: $cx-secondary-color;
+			}
+			&::before {
+				color: $cx-secondary-color;
+			}
+		}
+	}
+}
+
+.newsletter-wrapper {
+	margin-top: $cx-heading-margin-bottom;
+	input[type="submit"] {
+		position: relative;
+		left:-10px;
+	}
+
+	input[type="email"],
+	input[type="text"] {
+		padding-right: 20px;
+		color: $cx-text-color;
+		outline: none;
+	}
+}
