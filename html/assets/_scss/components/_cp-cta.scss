@@ -19,6 +19,14 @@
 	}
 
 	h2 {
+		color: $cx-secondary-color;
+		span {
+			text-transform: uppercase;
+			color: $cx-white-color;
+		}
+	}
+
+	h2 {
 		margin-bottom: 5px;
 		@include respond-to(mobile) {
 			font-size: 24px;
@@ -59,7 +67,7 @@
 
 	&.has-bg {
 		@include cx-background("../img/CTA/cta-1.jpg");
-		@extend %overlay;
+		@include cx-overlay(rgba(0,0,0,.65));
 	}
 
 
