@@ -84,6 +84,7 @@ INDEX:
 		    	visibleSize: '100%',
 		    	height:500,
 		    	arrows: true,
+		    	slideDistance: 0,
 				buttons: false,
 				autoplay:false,
 				forceSize: 'fullWidth',

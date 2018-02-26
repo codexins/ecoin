@@ -3,20 +3,6 @@
  *
  */
 
- // .slider-section {
- //    height: 500px;
- //    @include respond-to(notebook) {
- //        height: 470px;
- //    }
-
- //    @include respond-to(tablet) {
- //        height: 430px;
- //    }
-
- //    @include respond-to(mobile) {
- //        height:350px;
- //    }
- // }
 
 .overlay-mask{
 	@include abs-position(0,0,0,0);
@@ -104,5 +90,53 @@
     @include respond-to(mobile) {
         width:100%;
 
+    }
+}
+
+
+.sp-arrows {
+    
+    .sp-arrow {
+        background-color: rgba($cx-primary-color, .55);
+        -webkit-border-top-right-radius: 3px;
+        -moz-border-top-right-radius: 3px;
+        -ms-border-top-right-radius: 3px;
+        -o-border-top-right-radius: 3px;
+        border-top-right-radius: 3px;
+        -webkit-border-bottom-right-radius: 3px;
+        -moz-border-bottom-right-radius: 3px;
+        -ms-border-bottom-right-radius: 3px;
+        -o-border-bottom-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        @include box(25px, 60px);
+        @extend %cx-transition;
+
+        &::before {
+            @include box(22px, 60px);
+            background-color: transparent;
+            transform: none;
+            content:"\f104";
+            font-family: FontAwesome;
+            font-size: 30px;
+            color: #fff;
+            top:0;
+            left:0;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            background-color: rgba($cx-primary-color, .85);
+        }
+    }
+
+    .sp-previous-arrow {
+        left:0;
+    }
+
+    .sp-next-arrow {
+        right:0;
     }
 }
