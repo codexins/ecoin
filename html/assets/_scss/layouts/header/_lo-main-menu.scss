@@ -3,16 +3,13 @@
  *
  */
 
- .menu-wrapper {
- 	background: $cx-offset-color;
- }
-
 .main-menu {
-	float: left;
+	float: right;
 	margin-bottom: 0;
 	padding-left: 0;
+
 	& > li {
-		padding: 15px 0;
+		padding: 27px 0;
 		& > a {
 		    color: $cx-text-color;
 		    &:focus,
@@ -24,7 +21,7 @@
 
 	li {
 	    float: left;
-	    margin-right: 30px;
+	    margin-left: 30px;
 	    position: relative;
 	    list-style-type: none;
 	    @extend %cx-transition;
@@ -101,9 +98,9 @@
 
 	    &:hover {
 	    	& > ul {
-    		    opacity: 1;
-				transform: scale(1);
-				visibility: visible;
+    		     opacity: 1;
+				 transform: scale(1);
+				 visibility: visible;
 	    	}
 	    }
 	}
@@ -111,47 +108,8 @@
 	@include media-only(notebook, max) {
 		display: none;
 	}
-}
 
-.menu-wrapper {
-	.search-bar {
-		float: right;
-		input {
-			margin-bottom: 0;
-			height: 40px;
-		}
-	}
-
-	.primary-nav {
-		@include flex-center(space-between, center);
-	}
-
-
-}
-
-.search-bar {
-	form {
-		position: relative;
-		input[type="submit"] {
-			position: absolute;
-			right:0;
-			top:0;
-			background: transparent;
-			border:0;
-			@extend %color-text;
-
-		}
-	}
-}
-
-
-.no-flexbox {
-	.menu-wrapper {
-		.primary-nav {
-			display: block;
-			.search-bar {
-				margin-top: 8px;
-			}
-		}
+	a {
+		transition: none;
 	}
 }
