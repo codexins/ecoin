@@ -21,10 +21,37 @@
 	}
 }
 
-.slick-dots {
-	bottom: -(2*$cx-heading-margin-bottom);
-}
 
 .prev-arrow {
 	right: 40px;
 }
+
+ .slick-dots {
+	bottom: -(2*$cx-heading-margin-bottom);
+ 	li {
+ 		margin:0 5px;
+ 		button {
+ 			&::before {
+ 				content:"";
+ 				width:20px;
+ 				height:5px;
+				background-color: $cx-primary-color;
+			    opacity: .4;
+			    top: 0;
+			    left: 0;
+			    bottom: 0;
+			    right: 0;
+			    margin: auto;
+ 			}
+ 		}
+
+ 		&.slick-active {
+ 			button {
+ 				&::before {
+ 					background-color: $cx-fourth-color;
+ 					opacity: .9;
+ 				}
+ 			}
+ 		}
+ 	}
+ }

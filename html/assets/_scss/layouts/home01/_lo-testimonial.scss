@@ -35,13 +35,15 @@
 			margin:0 ;
 			font-size: .85em;
 			font-family: $cx-body-font-family;
-			margin-bottom: 5px;
+			margin-bottom: 0;
 			text-transform: uppercase;
 			letter-spacing: 2px;
-			p {
-				font-size: .85em;
-				opacity: .75;
-			}
+
+		}
+
+		p {
+			font-size: .85em;
+			opacity: .75;
 		}
 	}
 
@@ -81,7 +83,12 @@
 			top:-20px;
 	    	opacity:.5;
 	    	display: block;
-	    	filter: blur(1px);
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			filter: grayscale(100%);
+
 	    	@include cx-circle(80px)
 	  		@include cx-transition(opacity .3s);
 	    	@include respond-to(small-mobile) {

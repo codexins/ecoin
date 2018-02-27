@@ -1,0 +1,25 @@
+/**
+ * components Back to top
+ *
+ */
+
+div#toTop {
+    position: fixed;
+    background: rgba($cx-primary-color, .55);
+    right: 0;
+    bottom: 45px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 99;
+    width: 30px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: inline-block;
+    display: none;
+    font-size: 20px;
+    @extend %cx-transition;
+    &:hover {
+    	background: rgba($cx-primary-color, .95);
+    }
+}
