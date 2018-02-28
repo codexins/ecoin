@@ -110,37 +110,14 @@
 
     <!-- wrapper div for mobile menu support -->
     <div id="o-wrapper" class="o-wrapper">
-        <header class="header">
+        <header id="full_parallax" class="header fill-screen parallax">
             <div class="intelligent-header header--fixed">
-                <div class="header-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="social-icons type01">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="top-content">
-                                    <a href="">Login</a>
-                                    <a href="">Register</a>
-                                    <a href="" class="quote-btn">Get a Quote</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- end of header-top -->
                 <div class="header-bottom">
                     <div class="container">
                         <div class="row flex-center">
                             <div class="col-xs-8 col-sm-3">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+                                    <a href="index.html"><img src="assets/img/logo-white.png" alt="Logo"></a>
                                 </div>
                             </div> <!-- end of col -->
 
@@ -274,230 +251,214 @@
                     </div> <!-- end of container -->
                 </div> <!-- end of header-bottom -->
             </div> <!-- end of intelligent header -->
+
+            <div class="showcase-text">
+                <h2>Welcome to <span>Ionize</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus voluptates aperiam magni necessitatibus tempore quae fugit perspiciatis omnis excepturi.</p>
+                <a href="#services" class="button-wrap button03"><span>Read More</span></a>
+            </div> <!-- end of showcase-text -->
+
+            <a href="#about" class="explore">
+                <div class="scroll-down"></div>
+            </a>
         </header> <!-- end of header -->
         
-        <div class="intelligent-header-space"></div> <!-- empty div with a height of header height-->
-         
-        <section class="slider-section mb0">
-            <div class="slider-pro" id="primary_slider">
-                <div class="sp-slides">
-                    <!-- Slide 1 -->
-                    <div class="sp-slide">
-                        <img class="sp-image" src="assets/img/slider/home-1/slide-1.jpg"/>
-                        <div class="layer-wrapper">
-                            <div class="inner-wrapper left-aligned">
-                                <h2 class="sp-layer" data-show-transition="right" data-show-delay="600" data-hide-delay="200">
-                                Lorem ipsum dolor sit amet.</h2>
-                                <p class="sp-layer" data-show-transition="right" data-show-delay="900" data-hide-delay="100">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam magnam labore et, repudiandae reprehenderit nesciunt.</p>
-                                <div class="sp-layer" data-show-transition="right" data-show-delay="1200">
-                                <a href="#" class="button-wrap button03"><span>Learn More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="sp-slide">
-                        <img class="sp-image" src="assets/img/slider/home-1/slide-2.jpg"/>
-                        <div class="layer-wrapper">
-                            <div class="inner-wrapper center-aligned">
-                                <h2 class="sp-layer" data-show-transition="down" data-show-delay="600" data-hide-delay="200">
-                                Lorem ipsum dolor sit amet.</h2>
-                                <p class="sp-layer" data-show-transition="up" data-show-delay="900" data-hide-delay="100">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam magnam labore et, repudiandae reprehenderit nesciunt.</p>
-                                <div class="sp-layer" data-show-transition="up" data-show-delay="1200">
-                                <a href="#" class="button-wrap button03"><span>Learn More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="sp-slide">
-                        <img class="sp-image" src="assets/img/slider/home-1/slide-3.jpg"/>
-                        <div class="layer-wrapper">
-                            <div class="inner-wrapper right-aligned">
-                                <h2 class="sp-layer" data-show-transition="left" data-show-delay="600" data-hide-delay="200">
-                                Lorem ipsum dolor sit amet.</h2>
-                                <p class="sp-layer" data-show-transition="up" data-show-delay="900" data-hide-delay="100">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam magnam labore et, repudiandae reprehenderit nesciunt.</p>
-                                <div class="sp-layer" data-show-transition="up" data-show-delay="1200">
-                                <a href="#" class="button-wrap button03"><span>Learn More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!-- end of slider-section -->
-        
-
         <main class="whole-wrapper">
             <section class="about pt-full">
                 <div class="container">
-                    <div class="row eqheight">
-                        <div class="col-xs-12 col-sm-8">
-                            <p class="subtitle">Knowledge Base</p>
-                            <h2 class="primary-title"><span>History</span> of Cryptocurrency</h2>
-                            <p>The history of crytpocurrency is actually a fairly short one. Yes, we have had digital currency systems before these cryptocurrencies existed, but they are not the same thing. As we mentioned on our “Cryptocurrency Explained” page, former versions of digital currencies were strictly centralized, whereas these new forms of cryptocurrency, such as Bitcoin and Ethereum, are decentralized in nature</p>
-                            <a class="button-wrap button01" href=""><span>Register</span></a>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="section-intro centered">
+                                <p class="subtitle">Knowledge Base</p>
+                                <h2 class="primary-title"><span>History</span> of Cryptocurrency</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ad, pariatur facilis! Iure molestiae fugiat earum saepe illo dolor, velit ex voluptatem cupiditate veniam quis magnam reiciendis, blanditiis totam asperiores.</p>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-4">
-                            <img src="assets/img/about/about.jpg" alt="">
+                            <div class="cp-imgbox1">
+                                <img src="assets/img/about/about-1.jpg" alt="">
+                                <div class="caption">
+                                    <div class="blur"></div>
+                                    <div class="caption-text">
+                                        <h3>Amazing Caption</h3>
+                                        <p>Whatever It Is - Always Awesome</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="cp-imgbox1">
+                                <img src="assets/img/about/about-1.jpg" alt="">
+                                <div class="caption">
+                                    <div class="blur"></div>
+                                    <div class="caption-text">
+                                        <h3>Amazing Caption</h3>
+                                        <p>Whatever It Is - Always Awesome</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="cp-imgbox1">
+                                <img src="assets/img/about/about-1.jpg" alt="">
+                                <div class="caption">
+                                    <div class="blur"></div>
+                                    <div class="caption-text">
+                                        <h3>Amazing Caption</h3>
+                                        <p>Whatever It Is - Always Awesome</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div> <!-- end of row -->
                 </div> <!-- end of container -->
             </section> <!-- end of about -->
 
-            <section class="properties bgc-offset vpadding">
+            <section class="properties bgc-offset pt-full pt-quarter mb0">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <h2 class="primary-title"><span>Why Use</span> Bitcoin?</h2>
-                            <div class="info-carousel">
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/015-bitcoin-66.svg" alt="">
-                                    <h3>Highly Secured</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="info-box type02">
+                                <img src="assets/img/flaticons/015-bitcoin-66.svg" alt="">
+                                <h3>Highly Secured</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
+                            </div>
+                        </div>
 
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/004-bitcoin-73.svg" alt="">
-                                    <h3>Easy access</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="info-box type02">
+                                <img src="assets/img/flaticons/004-bitcoin-73.svg" alt="">
+                                <h3>Highly Secured</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
+                            </div>
+                        </div>
 
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/018-money-bag-1.svg" alt="">
-                                    <h3>Fast Settlement</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="info-box type02">
+                                <img src="assets/img/flaticons/033-bitcoin-54.svg" alt="">
+                                <h3>Highly Secured</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
+                            </div>
+                        </div>
 
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/033-bitcoin-54.svg" alt="">
-                                    <h3>Access to Everyone</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="info-box type02">
+                                <img src="assets/img/flaticons/077-piggy-bank.svg" alt="">
+                                <h3>Highly Secured</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
+                            </div>
+                        </div>
 
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/100-bitcoin.svg" alt="">
-                                    <h3>Lower Fees</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="info-box type02">
+                                <img src="assets/img/flaticons/058-bitcoin-36.svg" alt="">
+                                <h3>Highly Secured</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
+                            </div>
+                        </div>
 
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/077-piggy-bank.svg" alt="">
-                                    <h3>No third party</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
-
-                                <div class="info-box">
-                                    <img src="assets/img/flaticons/058-bitcoin-36.svg" alt="">
-                                    <h3>No boundaries</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
-                                </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="info-box type02">
+                                <img src="assets/img/flaticons/015-bitcoin-66.svg" alt="">
+                                <h3>Highly Secured</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aspernatur.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section> <!-- end of properties -->
 
-            <section class="how-to-help mb-half">
+            <section class="how-to-help type02 vpadding mb0">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12">
-                            <div class="section-intro centered">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="ref-height2">
+                                
                                 <p class="subtitle">Our Features</p>
-                                <h2 class="primary-title centered"><span>How can</span> we help?</h2>
-                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere aut eum quas, cupiditate dignissimos reprehenderit.</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="info-item centered">
-                                <div class="thumb-icon">                              
-                                    <img src="assets/img/flaticons/080-bitcoin-18.svg" alt="How can we help?">
-                                </div>
-                                <div class="item-name">
-                                    <h3 class="secondary-title">Instant Access</h3>
-                                </div>
-                                <div class="info-content">
-                                    <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
-                                </div>
-                            </div>
+                                <h2 class="primary-title"><span>How can</span> we help?</h2>
+                                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem vel, non fugit eligendi culpa architecto cum ab voluptatum possimus! Earum quas minus porro voluptatum, suscipit sunt quos totam, optio quisquam tempora alias officiis asperiores tempore obcaecati cumque enim pariatur nisi numquam ipsum, dicta deleniti? Quasi voluptas numquam amet repellendus harum!</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis soluta minus delectus.</p>
+                                <a href="" class="button-wrap button02"><span>Learn More</span></a>
+                            </div> <!-- end of ref-height -->
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="info-item centered">
-                                <div class="thumb-icon">                              
-                                    <img src="assets/img/flaticons/092-bitcoin-6.svg" alt="How can we help?">
-                                </div>
-                                <div class="item-name">
-                                    <h3 class="secondary-title">Safe and Secure</h3>
-                                </div>
-                                <div class="info-content">
-                                    <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-sm"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="info-item centered">
-                                <div class="thumb-icon">                              
-                                    <img src="assets/img/flaticons/096-bitcoin-2.svg" alt="How can we help?">
-                                </div>
-                                <div class="item-name">
-                                    <h3 class="secondary-title">Easy Registration</h3>
-                                </div>
-                                <div class="info-content">
-                                    <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-md visible-lg"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="info-item centered">
-                                <div class="thumb-icon">                              
-                                    <img src="assets/img/flaticons/094-bitcoin-4.svg" alt="How can we help?">
-                                </div>
-                                <div class="item-name">
-                                    <h3 class="secondary-title">All Platforms</h3>
-                                </div>
-                                <div class="info-content">
-                                    <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-sm"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="info-item centered">
-                                <div class="thumb-icon">                              
-                                    <img src="assets/img/flaticons/099-exchange.svg" alt="How can we help?">
-                                </div>
-                                <div class="item-name">
-                                    <h3 class="secondary-title">Buy and Sell Crypto</h3>
-                                </div>
-                                <div class="info-content">
-                                    <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
-                                </div>
-                            </div>
+                        <div class="col-xs-12 col-sm-6">
+
+                            <div class="scroll-wrap">
+                                <div class="slider" id="slider2">
+                                    <div class="info-item centered">
+                                        <div class="thumb-icon">                     
+                                            <img src="assets/img/flaticons/080-bitcoin-18.svg" alt="How can we help?">
+                                        </div>
+                                        <div class="item-name">
+                                            <h3 class="secondary-title">Instant Access</h3>
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item centered">
+                                        <div class="thumb-icon">                     
+                                            <img src="assets/img/flaticons/080-bitcoin-18.svg" alt="How can we help?">
+                                        </div>
+                                        <div class="item-name">
+                                            <h3 class="secondary-title">Instant Access</h3>
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item centered">
+                                        <div class="thumb-icon">                     
+                                            <img src="assets/img/flaticons/080-bitcoin-18.svg" alt="How can we help?">
+                                        </div>
+                                        <div class="item-name">
+                                            <h3 class="secondary-title">Instant Access</h3>
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item centered">
+                                        <div class="thumb-icon">                     
+                                            <img src="assets/img/flaticons/080-bitcoin-18.svg" alt="How can we help?">
+                                        </div>
+                                        <div class="item-name">
+                                            <h3 class="secondary-title">Instant Access</h3>
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end of slider -->
+                            </div> <!-- end of scroll-wrap -->
+
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="info-item centered last">
-                                <div class="thumb-icon">                              
-                                    <img src="assets/img/flaticons/098-bitcoin-1.svg" alt="How can we help?">
-                                </div>
-                                <div class="item-name">
-                                    <h3 class="secondary-title">Multiple Crypto</h3>
-                                </div>
-                                <div class="info-content">
-                                    <p>Corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow world view of disruptive innovation &amp; technology. </p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div> <!-- end of row -->
                 </div> <!-- end of container -->
             </section> <!-- end of how-to-help -->
 
-            <section class="process pt-full pb-half mb0 parallax">
+
+            <section class="counter vpadding bgc-offset">
+                <div class="container">
+
+                </div>
+            </section>
+
+            <section class="process bgc-offset pt-full pb-half mb0 parallax">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
@@ -691,7 +652,7 @@
 
                                     <a href="" class="default-btn">Buy Now</a>
                                 </div> <!-- end of currency-calculator -->
-                            </div>
+                            </div> <!-- end of ref-height -->
 
                         </div>
                     </div> <!-- end of row -->
@@ -997,9 +958,6 @@
                     </div>
                 </div>
             </section>
-            
-
-
         </main> <!-- end of main -->
 
         <footer>
@@ -1133,7 +1091,6 @@
             <div id="toTop">
                 <i class="fa fa-angle-double-up"></i>
             </div> <!-- end of toTop -->
-
         </footer>    
 
     </div><!-- /o-wrapper -->

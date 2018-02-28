@@ -1,0 +1,61 @@
+/**
+ * layout home02 / how to help
+ *
+ */
+
+
+ .how-to-help {
+ 	&.type02 {
+ 		position: relative;
+
+		background-image: url('../img/slider/home-1/slide-2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center right;
+ 		&::before {
+ 			content:"";
+ 			position: absolute;
+ 			left:0;
+ 			top:0;
+ 			width:50%;
+ 			height:100%;
+ 			background: #fff;
+ 			display: block;
+ 		}
+
+ 		.scroll-wrap {
+ 			height:400px;
+		    width: 400px;
+		    margin-left: auto;
+		    margin-right: auto;
+ 			.slider {
+ 				margin: 0;
+ 			}
+
+ 			.slick-dots {
+ 				right: -85px;
+ 			}
+ 		}
+
+ 		.thumb-icon {
+ 			img {
+			    margin-left: auto;
+			    margin-right: auto;
+ 			}
+ 		}
+
+ 		.info-item {
+ 			max-width: 400px;
+ 			background: rgba(255,255,255,.92);
+ 			padding:40px 20px;
+ 			color: $cx-text-color;
+ 			margin-bottom: 0;
+				
+ 		}
+ 	}
+ }
+
+.ref-height,
+.ref-height2 {
+ 	overflow: hidden;
+ }

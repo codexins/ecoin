@@ -37,12 +37,16 @@
 		border-color: $cx-secondary-color;
 		color:$cx-white-color;
  	}
+
+ 	.ref-height {
+ 		padding: 50px 0 50px 50px;
+ 	}
  }
 
  .currency-calculator {
  	position: relative;
  	z-index: 1;
- 	margin:50px 0 50px 50px;
+ 	margin:0;
  	padding:30px 30px 100px 30px;
  	background: $cx-white-color;
  	.section-converter-ccc {
@@ -86,7 +90,7 @@
 
 .scroll-wrap {
 	position: relative;
-	height:515px;
+	// height:515px;
 }
 
 .scroll-wrap .slick-dots {

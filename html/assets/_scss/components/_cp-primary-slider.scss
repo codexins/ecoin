@@ -5,12 +5,20 @@
 
 
 .overlay-mask{
-	@include abs-position(0,0,0,0);
-	background-color: rgba(0,0,0,.65);
-    background-image: url("../img/slider/home-1/overlay-image.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include abs-position(0,0,0,0);
+    background: #536976; /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, $cx-primary-color, $cx-fourth-color);
+    background: -o-linear-gradient(left, $cx-primary-color, $cx-fourth-color);
+    background: linear-gradient(to right, $cx-primary-color, $cx-fourth-color);
+    opacity:.75;
+
+    &::after {
+        @include abs-position(0,0,0,0);
+        background-image: url("../img/slider/home-1/overlay-image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
 }
 

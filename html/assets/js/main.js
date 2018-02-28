@@ -44,6 +44,10 @@ INDEX:
         $owlSliderSlide		= $(".slider-section .slide-single"),
         $fillscreen 		= $(".fill-screen"),
         $fullscreenVideo 	= $("#header_full_screen_video"),
+        $refHeight 	        = $(".ref-height"),
+        $refHeight2 	    = $(".ref-height2"),
+        $verSlider 	        = $("#slider"),
+        $verSlider2 	    = $("#slider2"),
         $bgSlide 			= $("#header_bg_slide"),
         $sfMenu 			= $(".main-menu"),
         $pageloader 		= $(".cx-pageloader"),
@@ -110,6 +114,7 @@ INDEX:
 	};
 
 
+
     /************************************************************
         s03 - Primary Slider Background Settings
     *************************************************************/
@@ -142,6 +147,7 @@ INDEX:
 	      	$fillscreen.css("height", "500px");
 	    }
     };
+
 
 
     /************************************************************
@@ -215,6 +221,23 @@ INDEX:
         $(".intelligent-header-space").height(intHeight);
     };
 
+	/************************************************************
+		c -  - 
+	*************************************************************/
+
+	CODEXIN.referrenceHeight = function() {
+		if ($refHeight.cxExists()) {
+			var estHeight = $refHeight.outerHeight();
+			$('.converter .scroll-wrap').height(estHeight);
+		}
+
+		if ($refHeight2.cxExists()) {
+			var estHeight2 = $refHeight2.outerHeight();
+			$('.how-to-help .scroll-wrap').height(estHeight2);
+		}
+    };
+
+
 
     /************************************************************
         s09 - Headroom Js for Auto Hide the header on scroll
@@ -230,7 +253,7 @@ INDEX:
 	    $window.on('scroll', function() {
 	        var height = $window.scrollTop();
 
-	        if (height < 200) {
+	        if (height < 150) {
 	            $intelHeader.removeClass('scrolling-up');
 	        } else {
 	            $intelHeader.addClass('scrolling-up');
@@ -566,29 +589,60 @@ INDEX:
     /************************************************************
     	vertical carousel
     *************************************************************/
+    CODEXIN.verticalCarousel = function() {
+    	if ($verSlider.cxExists()) {
+		    //var $slider = $("#slider");
+			$verSlider.on('init', function () {
+				mouseWheel($verSlider);
+			}).slick({
+				dots: true,
+				vertical: true,
+				infinite: true,
+				arrows: false
+			});
+			function mouseWheel($slider) {
+				$(".scroll-wrap").on('wheel', { $slider: $verSlider }, mouseWheelHandler);
+			}
+			function mouseWheelHandler(event) {
+				event.preventDefault();
+				var $slider = event.data.$slider;
+				var delta = event.originalEvent.deltaY;
+				if (delta > 0) {
+					$slider.slick('slickPrev');
+				} else {
+					$slider.slick('slickNext');
+				}
+			}
+    	}
 
-    var $slider = $("#slider");
-	$slider.on('init', function () {
-		mouseWheel($slider);
-	}).slick({
-		dots: true,
-		vertical: true,
-		infinite: true,
-		arrows: false
-	});
-	function mouseWheel($slider) {
-		$(".scroll-wrap").on('wheel', { $slider: $slider }, mouseWheelHandler);
-	}
-	function mouseWheelHandler(event) {
-		event.preventDefault();
-		var $slider = event.data.$slider;
-		var delta = event.originalEvent.deltaY;
-		if (delta > 0) {
-			$slider.slick('slickPrev');
-		} else {
-			$slider.slick('slickNext');
-		}
-	}
+
+    	if ($verSlider2.cxExists()) {
+		    //var $slider = $("#slider");
+			$verSlider2.on('init', function () {
+				mouseWheel($verSlider2);
+			}).slick({
+				dots: true,
+				vertical: true,
+				infinite: true,
+				arrows: false
+			});
+			function mouseWheel($slider) {
+				$(".scroll-wrap").on('wheel', { $slider: $verSlider2 }, mouseWheelHandler);
+			}
+			function mouseWheelHandler(event) {
+				event.preventDefault();
+				var $slider = event.data.$slider;
+				var delta = event.originalEvent.deltaY;
+				if (delta > 0) {
+					$slider.slick('slickPrev');
+				} else {
+					$slider.slick('slickNext');
+				}
+			}
+    	}
+    };
+
+
 
     /************************************************************
     	s19 - Parallax JS
@@ -638,14 +692,16 @@ INDEX:
     	CODEXIN.clientCarousel(),
     	CODEXIN.explore(),
     	CODEXIN.scrollToTop(),
-    	CODEXIN.placeHolders();
-    	CODEXIN.parallax();
+    	CODEXIN.placeHolders(),
+    	CODEXIN.parallax(),
+    	CODEXIN.verticalCarousel();
     });
 
     // Window load and resize functions
     $window.on('load resize', function() {
         CODEXIN.fullscreenHeader(),
-        CODEXIN.headerPlaceholder();
+        CODEXIN.headerPlaceholder(),
+        CODEXIN.referrenceHeight();
     });
 
 })(jQuery);

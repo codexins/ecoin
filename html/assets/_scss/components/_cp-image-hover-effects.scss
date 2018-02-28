@@ -1,0 +1,64 @@
+/**
+ * components Image Hover Effects
+ *
+ */
+
+ .cp-imgbox1 {
+ 	padding: 0;
+ 	position: relative;
+ 	overflow: hidden;
+
+ 	img {
+ 		margin: 0;
+ 		padding: 0;
+ 		display: block;
+	    -webkit-transform: translateY(0px);
+	    -moz-transform: translateY(0px);
+	    -ms-transform: translateY(0px);
+	    -o-transform: translateY(0px);
+	    transform: translateY(0px);
+	    @extend %cx-transition;
+ 	}
+
+ 	.caption {
+ 		position: absolute;
+ 		width:100%;
+ 		background: $cx-primary-color;
+ 		left:0;
+ 		top:auto;
+ 		padding:15px;
+ 		color: $cx-white-color;
+	    -webkit-transform: translateY(0);
+	    -moz-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	    -o-transform: translateY(0);
+	    transform: translateY(0);
+ 		@extend %cx-transition;
+ 		h3 {
+ 			font-size: 1.1em;
+			margin-bottom: 5px;
+ 		}
+
+ 		p {
+ 			margin-bottom: 0;
+ 		}	
+ 	}
+
+ 	&:hover {
+ 		.caption {
+		    -webkit-transform: translateY(-100%);
+		    -moz-transform: translateY(-100%);
+		    -ms-transform: translateY(-100%);
+		    -o-transform: translateY(-100%);
+		    transform: translateY(-100%);
+ 		}
+
+ 		img {
+		    -webkit-transform: translateY(-40px);
+		    -moz-transform: translateY(-40px);
+		    -ms-transform: translateY(-40px);
+		    -o-transform: translateY(-40px);
+		    transform: translateY(-40px);
+ 		}
+ 	}
+ }

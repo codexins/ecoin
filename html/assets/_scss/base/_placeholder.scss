@@ -235,6 +235,20 @@
 	}
 }
 
+%pt-quarter {
+	padding-top: $cx-section-spacing - $cx-heading-margin-bottom;
+	@include respond-to(mobile) {
+		padding-top: $cx-section-spacing-mob - $cx-heading-margin-bottom;
+	}
+}
+
+%pb-quarter {
+	padding-bottom: $cx-section-spacing - $cx-heading-margin-bottom;
+	@include respond-to(mobile) {
+		padding-bottom: $cx-section-spacing-mob - $cx-heading-margin-bottom;
+	}
+}
+
 // half margin & padding
 
 %mb-half {
