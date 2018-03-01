@@ -1,0 +1,55 @@
+/**
+ * components static-crypto-widgets
+ *
+ */
+
+ .market-cap-table {
+ 	&.table {
+ 		margin-bottom: 0;
+ 	}
+ 	font-size: .9em;
+ 	tr {
+ 		background: $cx-white-color;
+ 		&.heading {
+ 			background: $cx-primary-color;
+ 			color: #fff;
+ 		}
+ 	}
+
+	.up {
+		color: #093;
+	}
+
+	.down {
+		color: #d14836;
+	}
+
+	&.table-bordered {
+		& > tbody {
+			& > tr {
+				& > th {
+					border: 1px solid darken($cx-primary-color, 5%);
+				}
+			}
+		}	
+	}
+
+	td {
+		span {
+			display: inline-block;
+			margin-right: 5px;
+
+			img {
+				width:16px;
+				height:16px;
+				position: relative;
+				top:-1px;
+			}
+		}
+	}
+
+ }
+
+ .table-striped.market-cap-table>tbody>tr.heading {
+ 	background: $cx-primary-color;
+ }

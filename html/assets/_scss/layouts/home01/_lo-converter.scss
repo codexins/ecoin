@@ -135,3 +135,35 @@
 	background: $cx-white-color;
 	@include box(12px, 12px);
 }
+
+
+.lifted-up {
+	margin-top: -175px;
+	background: $cx-white-color;
+	padding-top: $cx-section-spacing;
+	border-top: 1px solid #ebebeb;
+}
+
+.static-converter {
+	@include flex-center(center, center);
+
+	input[type="submit"] {
+		//margin-bottom: 15px;
+		height:48px;
+	}
+
+	.form-control {
+		height: 48px;
+		@include border-radius(0);
+		margin-bottom: 0;
+	}
+	select {
+		position: relative;
+		left:-5px;
+		background: $cx-offset-color;
+	}
+
+	.form-group {
+		margin-right: 5px;
+	}
+}

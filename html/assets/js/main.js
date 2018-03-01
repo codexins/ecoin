@@ -21,6 +21,7 @@ INDEX:
 	s16 - Smooth Scroll to anchor tags
 	s17 - Scroll to Top JS
 	s18 - Placeholder JS
+	s19 - Restable
 
 
 ******************************/
@@ -60,7 +61,8 @@ INDEX:
         $slickNav 			= $(".testimonial-nav"),
         $slickThree 		= $(".testimonial-carousel-type-02"),
         $slickFour 			= $(".client-carousel"),
-        $toTop 				= $("#toTop");
+        $toTop 				= $("#toTop"),
+        $cxTable 		    = $(".market-cap-table");
         
     // Check if element exists
     $.fn.cxExists = function() {
@@ -662,8 +664,16 @@ INDEX:
 	};
 
 
+	/************************************************************
+		s22 -  Restable JS
+	*************************************************************/
 
-
+	CODEXIN.cxResTable = function() {
+		if ($cxTable.cxExists()) {
+			$cxTable.ReStable();
+		}
+	}
+    
 	/************************************************************
 		s99 - execute all functions
 	*************************************************************/
@@ -694,7 +704,8 @@ INDEX:
     	CODEXIN.scrollToTop(),
     	CODEXIN.placeHolders(),
     	CODEXIN.parallax(),
-    	CODEXIN.verticalCarousel();
+    	CODEXIN.verticalCarousel(),
+    	CODEXIN.cxResTable();
     });
 
     // Window load and resize functions

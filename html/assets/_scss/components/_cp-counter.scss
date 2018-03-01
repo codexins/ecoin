@@ -3,3 +3,43 @@
  *
  */
 
+ .counter-wrapper {
+ 	@include flex-center(space-evenly, center);
+ }
+
+.counter-item {
+	overflow: hidden;
+
+	.counter-icon {
+		i {
+			font-size: 70px;
+			line-height: 1em;
+		}
+	}
+
+	.counter {
+		font-size: 52px;
+		font-weight: bold;
+		line-height: 1em;
+		margin-bottom: 0;
+	}
+
+	.counter-title {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: .875em;
+	}
+
+	&.type01 {
+		position: relative;
+		.counter-text {
+			padding-left:85px;
+		}
+
+		.counter-icon {
+			position:absolute;
+			top:5px;
+			left:0;
+		}
+	}
+}

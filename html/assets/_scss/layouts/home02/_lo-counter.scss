@@ -1,0 +1,13 @@
+/**
+ * layout home02 / counter
+ *
+ */
+
+
+.counter {
+	&.has-bg {
+		@include cx-background('../img/slider/home-2/slide-2.jpg');
+		color: $cx-white-color;
+		@include cx-overlay(rgba(0,0,0,.65));
+	}
+}

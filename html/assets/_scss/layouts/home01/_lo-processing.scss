@@ -4,14 +4,17 @@
  */
 
  .process {
- 	color: #fff;
- 	@include cx-overlay(rgba(0,0,0,0.65));
- 	@include cx-background('../img/slider/home-1/slide-3.jpg');
  	.processing-columns {
  		li {
 	 		&::after {
 	 			border-color: #fff;
 	 		}
  		}
+ 	}
+
+ 	&.has-bg {
+ 		color: #fff;
+	 	@include cx-overlay(rgba(0,0,0,0.65));
+	 	@include cx-background('../img/slider/home-1/slide-3.jpg');
  	}
  }
