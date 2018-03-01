@@ -57,9 +57,9 @@ INDEX:
         $isoContainer 		= $(".portfolio-wrapper"),
         $isoFilter	 		= $(".portfolio-filter li"),
         $slickOne 			= $(".info-carousel"),
-        $slickTwo 			= $(".testimonial-carousel"),
+        $slickTwo 			= $(".testimonial-carousel.type01"),
         $slickNav 			= $(".testimonial-nav"),
-        $slickThree 		= $(".testimonial-carousel-type-02"),
+        $slickThree 		= $(".testimonial-carousel.type02"),
         $slickFour 			= $(".client-carousel"),
         $toTop 				= $("#toTop"),
         $cxTable 		    = $(".market-cap-table");
@@ -430,8 +430,8 @@ INDEX:
 	        $slickThree.slick({
 	            slidesToShow: 1,
 	            slidesToScroll: 1,
-	            arrows: false,
-	            dots: true
+	            arrows: true,
+	            dots: false
 	        });
 	    }
 	};

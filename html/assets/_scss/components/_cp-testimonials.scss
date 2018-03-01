@@ -1,0 +1,147 @@
+/**
+ * components testimonials
+ *
+ */
+
+.testimonial-carousel {
+	margin-bottom: 20px;
+	text-align: center;
+	.comment-icon {
+		margin-bottom: 35px;
+		i {
+			font-size: 30px;
+		}
+
+	}
+
+	&.type02 {
+		margin-bottom: 0;
+	 	.client-meta {
+	 		padding-left: 0;
+	 		opacity:1;
+	 	}
+
+	 	.author-img {
+	 		img {
+	 			display: block;
+	 			margin-left: auto;
+	 			margin-right: auto;
+	 			@include border-radius(50%);
+	 		}
+	 	}
+
+	 	.comment-icon {
+	 		font-size: 38px;
+	 		color: $cx-primary-color;
+	 		margin-bottom: 0;
+	 	}
+
+	 	.client-name {
+	 		color: $cx-primary-color;
+	 	}
+	}
+}
+
+.client-meta {
+	padding-left: 100px;
+	margin-top: 20px;
+	opacity: .5;
+	.client-name{
+		margin:0 ;
+		font-size: .85em;
+		font-family: $cx-body-font-family;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+
+	}
+
+	p {
+		font-size: .85em;
+		opacity: .75;
+	}
+}
+
+
+
+.testimonial-nav {
+	max-width:100%;
+	margin: 0 auto ;
+	.slick-list{
+		min-height:80px;
+	}
+	.slick-track {
+	    margin-top: 15px;
+	}
+
+
+	.slick-slide {
+		visibility: hidden;
+		@extend %cx-transition;
+		opacity:0;
+	}
+
+	.slick-slide.slick-active {
+		visibility: visible;
+		opacity:1;
+	}
+
+	.nav-img {
+		text-align: left;
+		position: relative;
+		cursor: pointer;
+		img {
+			position: absolute;
+			left:0;
+			top:-20px;
+	    	opacity:.5;
+	    	display: block;
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			filter: grayscale(100%);
+
+	    	@include cx-circle(80px)
+	  		@include cx-transition(opacity .3s);
+	    	@include respond-to(small-mobile) {
+	    		width: 40px;
+	    		height:40px;
+	    	}
+	    	
+		}
+	}
+
+	.slick-center{
+		.nav-img {
+			img{
+			opacity:1;
+			filter: blur(0);
+			}
+
+			.client-meta {
+				opacity:1;
+			}
+		}
+	}
+
+	@include respond-to(large-mobile) {
+		max-width:360px;
+	}
+
+	@include respond-to(small-mobile) {
+		max-width:280px;
+	}
+
+	.slick-prev {
+		@include respond-to(small-mobile) {
+			left:0;
+		}
+	}
+
+	.slick-next {
+		@include respond-to(small-mobile) {
+			right:0;
+		}
+	}
+}
