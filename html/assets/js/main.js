@@ -38,31 +38,31 @@ INDEX:
         s00 - Predefined Variables
     *************************************************************/
 
-    var $window 			= $(window),
-        $document 			= $(document),
-        $sliderPro			= $("#primary_slider"),
-        $sliderProOverlay	= $(".sp-slide"),
-        $owlSliderSlide		= $(".slider-section .slide-single"),
-        $fillscreen 		= $(".fill-screen"),
-        $fullscreenVideo 	= $("#header_full_screen_video"),
-        $refHeight 	        = $(".ref-height"),
-        $refHeight2 	    = $(".ref-height2"),
-        $verSlider 	        = $("#slider"),
-        $verSlider2 	    = $("#slider2"),
-        $bgSlide 			= $("#header_bg_slide"),
-        $sfMenu 			= $(".main-menu"),
-        $pageloader 		= $(".cx-pageloader"),
-        $intelHeader 		= $(".intelligent-header"),
-        $counter 			= $(".counter"),
-        $isoContainer 		= $(".portfolio-wrapper"),
-        $isoFilter	 		= $(".portfolio-filter li"),
-        $slickOne 			= $(".info-carousel"),
-        $slickTwo 			= $(".testimonial-carousel.type01"),
-        $slickNav 			= $(".testimonial-nav"),
-        $slickThree 		= $(".testimonial-carousel.type02"),
-        $slickFour 			= $(".client-carousel"),
-        $toTop 				= $("#toTop"),
-        $cxTable 		    = $(".market-cap-table");
+    var $window 							= $(window),
+        $document 							= $(document),
+        $sliderPro							= $("#primary_slider"),
+        $sliderProOverlay					= $(".sp-slide"),
+        $owlSliderSlide						= $(".slider-section .slide-single"),
+        $fillscreen 						= $(".fill-screen"),
+        $fullscreenVideo 					= $("#header_full_screen_video"),
+        $refHeight 	        				= $(".ref-height"),
+        $refHeight2 	   					= $(".ref-height2"),
+        $verSlider 	        				= $("#slider"),
+        $verSlider2 	    				= $("#slider2"),
+        $bgSlide 							= $("#header_bg_slide"),
+        $sfMenu 							= $(".main-menu"),
+        $pageloader 						= $(".cx-pageloader"),
+        $intelHeader 						= $(".intelligent-header"),
+        $counter 							= $(".counter"),
+        $isoContainer 						= $(".portfolio-wrapper"),
+        $isoFilter	 						= $(".portfolio-filter li"),
+        $infoCarousel 						= $(".info-carousel"),
+        $testimonialCarouselType01 			= $(".testimonial-carousel.type01"),
+        $testiType01Nav 					= $(".testimonial-nav"),
+        $testimonialCarouselType02 			= $(".testimonial-carousel.type02"),
+        $slickFour 							= $(".client-carousel"),
+        $toTop 								= $("#toTop"),
+        $cxTable 		    				= $(".market-cap-table");
         
     // Check if element exists
     $.fn.cxExists = function() {
@@ -361,8 +361,8 @@ INDEX:
     *************************************************************/
 
     CODEXIN.reasonsCarousel = function() {
-	    if ($slickOne.cxExists()) {
-	        $slickOne.slick({
+	    if ($infoCarousel.cxExists()) {
+	        $infoCarousel.slick({
 	            infinite: true,
 	            slidesToShow: 4,
 	            slidesToScroll: 1,
@@ -398,15 +398,15 @@ INDEX:
     *************************************************************/
 
 	CODEXIN.testimonialCarousel = function() {
-		if ($slickTwo.cxExists()) {
-	        $slickTwo.slick({
+		if ($testimonialCarouselType01.cxExists()) {
+	        $testimonialCarouselType01.slick({
 	            slidesToShow: 1,
 	            slidesToScroll: 1,
 	            arrows: false,
 	            asNavFor: ".testimonial-nav"
 	        });
 
-	        $slickNav.slick({
+	        $testiType01Nav.slick({
 	            slidesToShow: 3,
 	            slidesToScroll: 1,
 	            asNavFor: ".testimonial-carousel",
@@ -426,12 +426,17 @@ INDEX:
 	    }
 
 	    //Testimonial Carousel Type 02
-	    if ($slickThree.cxExists()) {
-	        $slickThree.slick({
+	    if ($testimonialCarouselType02.cxExists()) {
+	        $testimonialCarouselType02.slick({
 	            slidesToShow: 1,
 	            slidesToScroll: 1,
 	            arrows: true,
-	            dots: false
+	            dots: false,
+	            autoplay: true,
+	            autoplaySpeed: 4000,
+	            cssEase: 'ease-in-out',
+	            prevArrow: '<span class="prev-arrow"><i class="fa fa-angle-left"></span>',
+	            nextArrow: '<span class="next-arrow"><i class="fa fa-angle-right"></span>',
 	        });
 	    }
 	};
@@ -619,7 +624,6 @@ INDEX:
 
 
     	if ($verSlider2.cxExists()) {
-		    //var $slider = $("#slider");
 			$verSlider2.on('init', function () {
 				mouseWheel($verSlider2);
 			}).slick({

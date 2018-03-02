@@ -39,6 +39,27 @@
 	 	.client-name {
 	 		color: $cx-primary-color;
 	 	}
+
+	 	.prev-arrow,
+	 	.next-arrow {
+	 		background: transparent;
+	 		@include cx-centered(vertical);
+	 		top:60%;
+
+	 		i {
+	 			font-size: 32px;
+	 		}
+	 	}
+
+	 	.prev-arrow {
+	 		left:-190px;
+	 		right: auto;
+	 	}
+
+	 	.next-arrow {
+	 		right:-190px;
+	 		left:auto;
+	 	}
 	}
 }
 

@@ -44,10 +44,10 @@
  	}
 
  	.bgrid-content {
- 		padding: 40px 0 30px;
- 	border:1px solid lighten($cx-border-color, 5%);
- 	padding-left:30px;
- 	padding-right: 30px;
+		padding: 40px 0 30px;
+	 	border:1px solid lighten($cx-border-color, 5%);
+	 	padding-left:30px;
+	 	padding-right: 30px;
  	}
 
  	h3 {
@@ -111,6 +111,7 @@
  		}
  	}
 
+
  	&:hover {
 	 	.thumbnail-img {
 	 		a {
@@ -128,5 +129,19 @@
 	 			opacity: 1;
 	 		}
 	 	}
+ 	}
+
+ 	&.type02 {
+ 		.blog-meta {
+ 			margin-bottom: 0;
+ 		}
+
+ 		.bgrid-content {
+			padding: 30px 0 0;
+ 			border:0;
+ 			h3 {
+ 				margin-bottom: $cx-heading-margin-bottom;
+ 			}
+ 		}
  	}
  }
